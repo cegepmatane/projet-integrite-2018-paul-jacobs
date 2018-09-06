@@ -4,8 +4,14 @@ import javafx.scene.control.Label;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
+import modele.Skieur;
 
 public class VueSkieur extends Application{
+	
+	protected Label valeurNom;
+	protected Label valeurPrenom;
+	protected Label valeurAge;
+	protected Label valeurPoids;
 
 	@Override
 	public void start(Stage stade) throws Exception {
@@ -13,19 +19,19 @@ public class VueSkieur extends Application{
 		Pane panneau = new Pane();	
 		GridPane grilleSkieur = new GridPane();
 
-		Label valeurNom = new Label("paul");
+		valeurNom = new Label("Jacobs");
 		grilleSkieur.add(new Label("Nom : "), 0, 0);
 		grilleSkieur.add(valeurNom, 1, 0);
 		
-		Label valeurPrenom = new Label("Jacobs");
+		valeurPrenom = new Label("paul");
 		grilleSkieur.add(new Label("Prenom : "), 0, 1);
 		grilleSkieur.add(valeurPrenom, 1, 1);
 
-		Label valeurAge = new Label("18 ans");
+		valeurAge = new Label("18 ans");
 		grilleSkieur.add(new Label("Age : "), 0, 2);
 		grilleSkieur.add(valeurAge, 1, 2);				
 		
-		Label valeurPoids = new Label("20 kg");
+		valeurPoids = new Label("70 kg");
 		grilleSkieur.add(new Label("Poids : "), 0, 3);
 		grilleSkieur.add(valeurPoids, 1, 3);		
 	
@@ -34,6 +40,19 @@ public class VueSkieur extends Application{
 		stade.setScene(new Scene(panneau, 400, 400));
 		
 		stade.show();
+		
+		Skieur skieur = new Skieur("Jacobs", "paul", "18 ans", "70 kg");
+		this.afficherSkieur(skieur);
+	}
+	
+	public void afficherSkieur(Skieur skieur)
+	{
+		valeurNom.setText(skieur.getNom());
+		valeurPrenom.setText(skieur.getPrenom());
+		valeurAge.setText(skieur.getAge());
+		valeurPoids.setText(skieur.getPoids());
+		
+		
 	}
 
 }
