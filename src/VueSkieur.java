@@ -51,6 +51,11 @@ public class VueSkieur extends Application{
 		valeurPrenom.setText(skieur.getPrenom());
 		valeurAge.setText(skieur.getAge());
 		valeurPoids.setText(skieur.getPoids());
+<<<<<<< HEAD
+=======
+		
+		
+>>>>>>> 99f202778aed70b0b66fc34ad732277a64642aa2
 	}
 
 }
