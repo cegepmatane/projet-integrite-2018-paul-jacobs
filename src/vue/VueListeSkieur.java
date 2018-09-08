@@ -3,33 +3,37 @@ import java.util.ArrayList;
 import java.util.List;
 
 import javafx.application.Application;
+import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Label;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.Pane;
+import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 import modele.Skieur;
 
- public class VueListeSkieur extends Application {
+ public class VueListeSkieur extends Scene {
 	 
  	private GridPane grilleSkieurs;
 
-	@Override
-	public void start(Stage stade) throws Exception {
-		Pane panneau = new Pane();	
+
+	public VueListeSkieur() {
+		super(new VBox(), 400, 400);
+		VBox panneau = (VBox) this.getRoot();
 		grilleSkieurs = new GridPane();
 		
 		panneau.getChildren().add(grilleSkieurs);
-		stade.setScene(new Scene(panneau, 400, 400));
-		stade.show();
 		
 		List<Skieur> listeSkieur = new ArrayList<Skieur>();
 		listeSkieur.add(new Skieur("Jacobs", "paul", "18 ans", "70 kg"));
 		listeSkieur.add(new Skieur("Jacobs", "paul", "18 ans", "70 kg"));
 		
 		afficherListeSkieur(listeSkieur);
+		
+		// TODO Auto-generated constructor stub
 	}
-	
+
+
 	public void afficherListeSkieur(List<Skieur> listeSkieurs)
 	{
 		
