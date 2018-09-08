@@ -1,4 +1,4 @@
-import vue.VueAjouterSkieur;
+import vue.NavigateurVueSkieur;
 
 public class App {
 
@@ -6,7 +6,7 @@ public class App {
 
 		//VueSkieur.launch(VueSkieur.class, parametres);
 		//VueListeSkieur.launch(VueListeSkieur.class, parametres);
-		VueAjouterSkieur.launch(VueAjouterSkieur.class, parametres);
+		NavigateurVueSkieur.launch(NavigateurVueSkieur.class, parametres);
 		
 	}
 

@@ -1,23 +1,20 @@
 package vue;
-import javafx.application.Application;
 import javafx.scene.Scene;
 import javafx.scene.control.Label;
 import javafx.scene.layout.GridPane;
-import javafx.scene.layout.Pane;
-import javafx.stage.Stage;
+import javafx.scene.layout.VBox;
 import modele.Skieur;
 
-public class VueSkieur extends Application{
+public class VueSkieur extends Scene{
 	
 	protected Label valeurNom;
 	protected Label valeurPrenom;
 	protected Label valeurAge;
 	protected Label valeurPoids;
-
-	@Override
-	public void start(Stage stade) throws Exception {
-		
-		Pane panneau = new Pane();	
+	
+	public VueSkieur() {
+		super(new VBox(), 400, 400);
+		VBox panneau = (VBox) this.getRoot();
 		GridPane grilleSkieur = new GridPane();
 
 		valeurNom = new Label("Jacobs");
@@ -36,11 +33,8 @@ public class VueSkieur extends Application{
 		grilleSkieur.add(new Label("Poids : "), 0, 3);
 		grilleSkieur.add(valeurPoids, 1, 3);		
 	
+		panneau.getChildren().add(new Label("VueMouton"));
 		panneau.getChildren().add(grilleSkieur);
-		
-		stade.setScene(new Scene(panneau, 400, 400));
-		
-		stade.show();
 		
 		Skieur skieur = new Skieur("Jacobs", "paul", "18 ans", "70 kg");
 		this.afficherSkieur(skieur);
