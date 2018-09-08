@@ -10,15 +10,15 @@ import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 import modele.Skieur;
 
- public class VueAjouterSkieur extends Application{
+ public class VueAjouterSkieur extends Scene{
  	protected TextField valeurNom;
 	protected TextField valeurCouleur;
 	protected TextField valeurPoids;
 	protected TextField valeurNaissance;
 	
-	@Override
-	public void start(Stage stade) throws Exception {
-		VBox panneau = new VBox();	
+	public VueAjouterSkieur(){
+		super(new VBox(), 400,400);
+		VBox panneau = (VBox) this.getRoot();	
 		GridPane grilleSkieur = new GridPane();
  		
 		valeurNom = new TextField();
@@ -37,9 +37,7 @@ import modele.Skieur;
 			
 		panneau.getChildren().add(new Label("Ajouter un skieur"));
 		panneau.getChildren().add(grilleSkieur);
-		panneau.getChildren().add(new Button("Enregistrer"));
-		stade.setScene(new Scene(panneau, 400, 400));
-		stade.show();		
+		panneau.getChildren().add(new Button("Enregistrer"));	
 	}
 	
 	public Skieur demanderSkieur()

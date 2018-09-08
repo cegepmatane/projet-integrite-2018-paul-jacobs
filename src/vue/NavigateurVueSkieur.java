@@ -7,14 +7,15 @@ public class NavigateurVueSkieur extends Application{
 
 	private VueSkieur vueSkieur;
 	private VueListeSkieur vueListeSkieur;
+	private VueAjouterSkieur vueAjouterSkieur;
 
 	@Override
 	public void start(Stage stade) throws Exception {
 		
 		this.vueSkieur = new VueSkieur();
 		this.vueListeSkieur = new VueListeSkieur();
-		
-		stade.setScene(this.vueListeSkieur);
+		this.vueAjouterSkieur = new VueAjouterSkieur();
+		stade.setScene(this.vueAjouterSkieur);
 		stade.show();	
 	}
 }
