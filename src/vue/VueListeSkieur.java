@@ -21,12 +21,6 @@ import modele.Skieur;
 		grilleSkieurs = new GridPane();
 		
 		panneau.getChildren().add(grilleSkieurs);
-		
-		List<Skieur> listeSkieur = new ArrayList<Skieur>();
-		listeSkieur.add(new Skieur("Jacobs", "paul", "18 ans", "70 kg"));
-		listeSkieur.add(new Skieur("Jacobs", "paul", "18 ans", "70 kg"));
-		
-		afficherListeSkieur(listeSkieur);
 
 		panneau.getChildren().add(new Button("ajouter un skieur"));
 		

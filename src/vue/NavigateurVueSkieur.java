@@ -3,6 +3,10 @@ package vue;
 import controleur.Controleur;
 import javafx.application.Application;
 import javafx.stage.Stage;
+import modele.Skieur;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class NavigateurVueSkieur extends Application{
 
@@ -19,7 +23,7 @@ public class NavigateurVueSkieur extends Application{
 		this.vueSkieur = new VueSkieur();
 		this.vueListeSkieur = new VueListeSkieur();
 		this.vueAjouterSkieur = new VueAjouterSkieur();
-
+		
 		this.controleur = new Controleur(this);
 	}
 
@@ -39,4 +43,16 @@ public class NavigateurVueSkieur extends Application{
 		this.stade.setScene(this.vueAjouterSkieur);
 		this.stade.show();
 	}
+
+    public VueSkieur getVueSkieur() {
+        return vueSkieur;
+    }
+
+    public VueListeSkieur getVueListeSkieur() {
+        return vueListeSkieur;
+    }
+
+    public VueAjouterSkieur getVueAjouterSkieur() {
+        return vueAjouterSkieur;
+    }
 }
