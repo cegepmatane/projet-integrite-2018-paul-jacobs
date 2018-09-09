@@ -25,6 +25,10 @@ public class NavigateurVueSkieur extends Application{
 		this.vueAjouterSkieur = new VueAjouterSkieur();
 
 		//this.controleur = new Controleur(this);
+
+        this.stade.setScene(null); //a null pour afficher la page et eviter bog controleur
+        this.stade.show();
+
         this.controleur = Controleur.getInstance(this);
 	}
 
