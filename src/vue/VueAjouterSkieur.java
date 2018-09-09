@@ -37,7 +37,7 @@ import modele.Skieur;
 			
 		panneau.getChildren().add(new Label("Ajouter un skieur"));
 		panneau.getChildren().add(grilleSkieur);
-		panneau.getChildren().add(new Button("Enregistrer"));	
+		panneau.getChildren().add(new Button("Enregistrer"));
 	}
 	
 	public Skieur demanderSkieur()

@@ -1,8 +1,10 @@
 package vue;
+
 import java.util.ArrayList;
 import java.util.List;
 
 import javafx.scene.Scene;
+import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.VBox;
@@ -14,7 +16,7 @@ import modele.Skieur;
 
 
 	public VueListeSkieur() {
-		super(new VBox(), 400, 400);
+		super(new VBox(), 400,400);
 		VBox panneau = (VBox) this.getRoot();
 		grilleSkieurs = new GridPane();
 		
@@ -25,6 +27,8 @@ import modele.Skieur;
 		listeSkieur.add(new Skieur("Jacobs", "paul", "18 ans", "70 kg"));
 		
 		afficherListeSkieur(listeSkieur);
+
+		panneau.getChildren().add(new Button("ajouter un skieur"));
 		
 		// TODO Auto-generated constructor stub
 	}

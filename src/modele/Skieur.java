@@ -1,12 +1,11 @@
 package modele;
 
 public class Skieur {
+	
  	protected String nom;
 	protected String prenom;
 	protected String age;
 	protected String poids;
-	
-	
 	
 	public Skieur(String nom) {
 		super();

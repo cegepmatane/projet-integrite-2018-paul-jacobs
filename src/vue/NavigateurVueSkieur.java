@@ -15,7 +15,7 @@ public class NavigateurVueSkieur extends Application{
 		this.vueSkieur = new VueSkieur();
 		this.vueListeSkieur = new VueListeSkieur();
 		this.vueAjouterSkieur = new VueAjouterSkieur();
-		stade.setScene(this.vueAjouterSkieur);
+		stade.setScene(this.vueListeSkieur);
 		stade.show();	
 	}
 }
