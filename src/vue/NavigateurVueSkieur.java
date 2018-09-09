@@ -23,8 +23,9 @@ public class NavigateurVueSkieur extends Application{
 		this.vueSkieur = new VueSkieur();
 		this.vueListeSkieur = new VueListeSkieur();
 		this.vueAjouterSkieur = new VueAjouterSkieur();
-		
-		this.controleur = new Controleur(this);
+
+		//this.controleur = new Controleur(this);
+        this.controleur = Controleur.getInstance(this);
 	}
 
     public void naviguerVersVueSkieur(){

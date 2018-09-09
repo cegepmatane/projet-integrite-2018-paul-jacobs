@@ -11,12 +11,14 @@ import java.util.List;
 
 public class Controleur {
 
+    private static Controleur instance=null;
+
     private VueSkieur vueSkieur;
     private VueListeSkieur vueListeSkieur;
     private VueAjouterSkieur vueAjouterSkieur;
     private NavigateurVueSkieur navigateurVueSkieur;
 
-    public Controleur(NavigateurVueSkieur navigateurVueSkieur){
+    private Controleur(NavigateurVueSkieur navigateurVueSkieur){
         this.navigateurVueSkieur = navigateurVueSkieur;
 
         this.vueSkieur = this.navigateurVueSkieur.getVueSkieur();
@@ -31,4 +33,14 @@ public class Controleur {
 
         this.navigateurVueSkieur.naviguerVersVueListeSkieur();
     }
+
+    //debut singleton
+    public static Controleur getInstance(NavigateurVueSkieur navigateurVueSkieur){
+        if (instance==null)
+            instance = new Controleur(navigateurVueSkieur);
+        return instance;
+    }
+
+    // fin singleton
+
 }
