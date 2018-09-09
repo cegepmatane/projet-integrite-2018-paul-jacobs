@@ -30,7 +30,7 @@ import modele.Skieur;
 
 	public void afficherListeSkieur(List<Skieur> listeSkieurs)
 	{
-		
+		this.grilleSkieurs.getChildren().clear(); //nettoyage de la grille d'affichage
 		int numero = 0;
 		this.grilleSkieurs.add(new Label("Nom"), 0, numero);
 		this.grilleSkieurs.add(new Label("Prenom"), 1, numero);
