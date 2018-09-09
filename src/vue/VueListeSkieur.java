@@ -50,6 +50,5 @@ import modele.Skieur;
 			this.grilleSkieurs.add(new Label(mouton.getAge()), 2, numero);
 			this.grilleSkieurs.add(new Label(mouton.getPoids()), 3, numero);			
 		}
-		
 	}
  }
