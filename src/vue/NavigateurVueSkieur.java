@@ -1,5 +1,6 @@
 package vue;
 
+import controleur.Controleur;
 import javafx.application.Application;
 import javafx.stage.Stage;
 
@@ -9,8 +10,9 @@ public class NavigateurVueSkieur extends Application{
 	private VueListeSkieur vueListeSkieur;
 	private VueAjouterSkieur vueAjouterSkieur;
 	private Stage stade;
+    private Controleur controleur;
 
-	@Override
+    @Override
 	public void start(Stage stade) throws Exception {
 
 		this.stade = stade;
@@ -18,7 +20,7 @@ public class NavigateurVueSkieur extends Application{
 		this.vueListeSkieur = new VueListeSkieur();
 		this.vueAjouterSkieur = new VueAjouterSkieur();
 
-		naviguerVersVueListeSkieur();
+		this.controleur = new Controleur(this);
 	}
 
     public void naviguerVersVueSkieur(){
