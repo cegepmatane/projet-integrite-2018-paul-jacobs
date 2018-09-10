@@ -1,5 +1,4 @@
 import vue.NavigateurVueSkieur;
-import vue.VueListeSkieur;
 
 public class App {
 

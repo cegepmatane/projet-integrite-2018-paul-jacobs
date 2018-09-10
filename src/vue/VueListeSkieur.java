@@ -1,14 +1,13 @@
 package vue;
 
-import java.util.ArrayList;
-import java.util.List;
-
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.VBox;
 import modele.Skieur;
+
+import java.util.List;
 
  public class VueListeSkieur extends Scene {
 	 
@@ -42,7 +41,9 @@ import modele.Skieur;
 			this.grilleSkieurs.add(new Label(mouton.getNom()), 0, numero);
 			this.grilleSkieurs.add(new Label(mouton.getPrenom()), 1, numero);
 			this.grilleSkieurs.add(new Label(mouton.getAge()), 2, numero);
-			this.grilleSkieurs.add(new Label(mouton.getPoids()), 3, numero);			
+			this.grilleSkieurs.add(new Label(mouton.getPoids()), 3, numero);
+			this.grilleSkieurs.add(new Button("modifier"), 4, numero);
+			this.grilleSkieurs.add(new Button("supprimer"), 5, numero);
 		}
 	}
  }
