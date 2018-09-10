@@ -1,4 +1,4 @@
-package accesseur;
+package donnee;
 
 import modele.Skieur;
 

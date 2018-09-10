@@ -1,14 +1,10 @@
-package controleur;
+package action;
 
-import accesseur.SkieurDAO;
-import modele.Skieur;
+import donnee.SkieurDAO;
 import vue.NavigateurVueSkieur;
 import vue.VueAjouterSkieur;
 import vue.VueListeSkieur;
 import vue.VueSkieur;
-
-import java.util.ArrayList;
-import java.util.List;
 
 public class Controleur {
 
