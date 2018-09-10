@@ -1,5 +1,6 @@
 package controleur;
 
+import accesseur.SkieurDAO;
 import modele.Skieur;
 import vue.NavigateurVueSkieur;
 import vue.VueAjouterSkieur;
@@ -17,6 +18,7 @@ public class Controleur {
     private VueListeSkieur vueListeSkieur;
     private VueAjouterSkieur vueAjouterSkieur;
     private NavigateurVueSkieur navigateurVueSkieur;
+    private SkieurDAO skieurDAO;
 
     private Controleur(NavigateurVueSkieur navigateurVueSkieur){
         this.navigateurVueSkieur = navigateurVueSkieur;
@@ -24,12 +26,9 @@ public class Controleur {
         this.vueSkieur = this.navigateurVueSkieur.getVueSkieur();
         this.vueListeSkieur = this.navigateurVueSkieur.getVueListeSkieur();
         this.vueAjouterSkieur = this.navigateurVueSkieur.getVueAjouterSkieur();
+        this.skieurDAO = new SkieurDAO();
 
-        List<Skieur> listeSkieur = new ArrayList<Skieur>();
-        listeSkieur.add(new Skieur("Jacobs", "paul", "18 ans", "70 kg"));
-        listeSkieur.add(new Skieur("Jacobs", "paul", "18 ans", "70 kg"));
-
-        vueListeSkieur.afficherListeSkieur(listeSkieur);
+        vueListeSkieur.afficherListeSkieur(skieurDAO.listerSkieur());
 
         this.navigateurVueSkieur.naviguerVersVueListeSkieur();
     }
