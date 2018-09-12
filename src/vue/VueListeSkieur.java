@@ -1,5 +1,7 @@
 package vue;
 
+import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
@@ -10,18 +12,16 @@ import modele.Skieur;
 import java.util.List;
 
  public class VueListeSkieur extends Scene {
-	 
+
  	private GridPane grilleSkieurs;
+
+ 	private Button actionCreerSkieur;
 
 
 	public VueListeSkieur() {
-		super(new VBox(), 400,400);
-		VBox panneau = (VBox) this.getRoot();
-		grilleSkieurs = new GridPane();
-		
-		panneau.getChildren().add(grilleSkieurs);
-
-		panneau.getChildren().add(new Button("ajouter un skieur"));
+		super(new GridPane(), 400,400);
+		grilleSkieurs = (GridPane) this.getRoot();
+        actionCreerSkieur = new Button("ajouter un skieur");
 		
 		// TODO Auto-generated constructor stub
 	}
@@ -45,5 +45,7 @@ import java.util.List;
 			this.grilleSkieurs.add(new Button("modifier"), 4, numero);
 			this.grilleSkieurs.add(new Button("supprimer"), 5, numero);
 		}
+
+		this.grilleSkieurs.add(this.actionCreerSkieur,1,numero+1);
 	}
  }

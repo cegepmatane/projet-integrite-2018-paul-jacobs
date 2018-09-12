@@ -2,8 +2,7 @@ package donnee;
 
 import modele.Skieur;
 
-import java.sql.DriverManager;
-import java.sql.SQLException;
+import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -33,7 +32,18 @@ public class SkieurDAO {
         }
 
         try {
-            DriverManager.getConnection(BASEDEDONNEES_URL, BASEDEDONNEES_USAGER, BASEDEDONNEES_MOTDEPASSE);
+            Connection connection = DriverManager.getConnection(BASEDEDONNEES_URL, BASEDEDONNEES_USAGER, BASEDEDONNEES_MOTDEPASSE);
+
+            Statement requeteListeSkieurs = connection.createStatement();
+            ResultSet curseurListeSkieurs = requeteListeSkieurs.executeQuery("SELECT * FROM skieur");
+            curseurListeSkieurs.next();
+
+            String nom = curseurListeSkieurs.getString("nom");
+            String prenom = curseurListeSkieurs.getString("prenom");
+            String age = curseurListeSkieurs.getString("age");
+            String poids = curseurListeSkieurs.getString("poids");
+
+            System.out.println("nom:"+nom+" prenom:"+prenom+" age:"+age+" poids"+poids);
         } catch (SQLException e) {
             e.printStackTrace();
         }

@@ -29,6 +29,8 @@ public class Controleur {
         this.navigateurVueSkieur.naviguerVersVueListeSkieur();
     }
 
+
+
     //debut singleton
     public static Controleur getInstance(NavigateurVueSkieur navigateurVueSkieur){
         if (instance==null)
