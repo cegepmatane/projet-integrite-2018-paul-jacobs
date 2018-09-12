@@ -1,5 +1,6 @@
 package vue;
 
+import action.Controleur;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
@@ -9,12 +10,13 @@ import javafx.scene.layout.VBox;
 import modele.Skieur;
 
  public class VueAjouterSkieur extends Scene{
- 	protected TextField valeurNom;
-	protected TextField valeurCouleur;
-	protected TextField valeurPoids;
-	protected TextField valeurNaissance;
-	
-	public VueAjouterSkieur(){
+ 	 protected TextField valeurNom;
+	 protected TextField valeurCouleur;
+	 protected TextField valeurPoids;
+	 protected TextField valeurNaissance;
+     private Controleur controleur;
+
+     public VueAjouterSkieur(){
 		super(new VBox(), 400,400);
 		VBox panneau = (VBox) this.getRoot();	
 		GridPane grilleSkieur = new GridPane();
@@ -42,4 +44,9 @@ import modele.Skieur;
 	{
 		return null;
 	}
+
+
+	 public void setControleur(Controleur controleur) {
+		 this.controleur = controleur;
+	 }
  }

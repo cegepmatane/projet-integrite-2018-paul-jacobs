@@ -1,4 +1,5 @@
 package vue;
+import action.Controleur;
 import javafx.scene.Scene;
 import javafx.scene.control.Label;
 import javafx.scene.layout.GridPane;
@@ -11,7 +12,8 @@ public class VueSkieur extends Scene{
 	protected Label valeurPrenom;
 	protected Label valeurAge;
 	protected Label valeurPoids;
-	
+	private Controleur controleur;
+
 	public VueSkieur() {
 		super(new VBox(), 400, 400);
 		VBox panneau = (VBox) this.getRoot();
@@ -48,4 +50,8 @@ public class VueSkieur extends Scene{
 		valeurPoids.setText(skieur.getPoids());
 	}
 
+
+	public void setControleur(Controleur controleur) {
+		this.controleur = controleur;
+	}
 }
