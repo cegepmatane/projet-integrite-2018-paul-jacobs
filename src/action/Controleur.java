@@ -33,6 +33,8 @@ public class Controleur {
     public void enregistrerSkieur(Skieur skieur)
     {
         System.out.println(skieur);
+        this.skieurDAO.ajouterSkieur(skieur);
+        vueListeSkieur.afficherListeSkieur(skieurDAO.listerSkieur());
         this.navigateurVueSkieur.naviguerVersVueListeSkieur();
     }
 
