@@ -27,8 +27,7 @@ public class Controleur {
 
         vueListeSkieur.afficherListeSkieur(skieurDAO.listerSkieur());
 
-        //this.navigateurVueSkieur.naviguerVersVueListeSkieur();
-        this.navigateurVueSkieur.naviguerVersVueAjouterSkieur();
+        this.navigateurVueSkieur.naviguerVersVueListeSkieur();
     }
 
     public void enregistrerSkieur(Skieur skieur)
@@ -37,6 +36,10 @@ public class Controleur {
         this.navigateurVueSkieur.naviguerVersVueListeSkieur();
     }
 
+    public void naviguerVersVueAjouterSkieur()
+    {
+        this.navigateurVueSkieur.naviguerVersVueAjouterSkieur();
+    }
 
     //debut singleton
     public static Controleur getInstance(NavigateurVueSkieur navigateurVueSkieur){

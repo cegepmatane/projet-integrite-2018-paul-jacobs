@@ -25,6 +25,13 @@ import java.util.List;
 		super(new GridPane(), 400,400);
 		grilleSkieurs = (GridPane) this.getRoot();
         actionCreerSkieur = new Button("ajouter un skieur");
+
+        actionCreerSkieur.setOnAction(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent event) {
+                controleur.naviguerVersVueAjouterSkieur();
+            }
+        });
 		
 		// TODO Auto-generated constructor stub
 	}
