@@ -20,15 +20,16 @@ public class NavigateurVueSkieur extends Application{
 		this.vueListeSkieur = new VueListeSkieur();
 		this.vueAjouterSkieur = new VueAjouterSkieur();
 
-		//transmission des controleurs dans les vues
-		this.vueSkieur.setControleur(this.controleur);
-		this.vueListeSkieur.setControleur(this.controleur);
-		this.vueAjouterSkieur.setControleur(this.controleur);
-
         this.stade.setScene(null); //a null pour afficher la page et eviter bog controleur
         this.stade.show();
 
+
         this.controleur = Controleur.getInstance(this);
+
+        //transmission du controleurs dans les vues
+        this.vueSkieur.setControleur(this.controleur);
+        this.vueListeSkieur.setControleur(this.controleur);
+        this.vueAjouterSkieur.setControleur(this.controleur);
 	}
 
     public void naviguerVersVueSkieur(){

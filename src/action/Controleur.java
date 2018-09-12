@@ -1,6 +1,7 @@
 package action;
 
 import donnee.SkieurDAO;
+import modele.Skieur;
 import vue.NavigateurVueSkieur;
 import vue.VueAjouterSkieur;
 import vue.VueListeSkieur;
@@ -26,9 +27,15 @@ public class Controleur {
 
         vueListeSkieur.afficherListeSkieur(skieurDAO.listerSkieur());
 
-        this.navigateurVueSkieur.naviguerVersVueListeSkieur();
+        //this.navigateurVueSkieur.naviguerVersVueListeSkieur();
+        this.navigateurVueSkieur.naviguerVersVueAjouterSkieur();
     }
 
+    public void enregistrerSkieur(Skieur skieur)
+    {
+        System.out.println(skieur);
+        this.navigateurVueSkieur.naviguerVersVueListeSkieur();
+    }
 
 
     //debut singleton
