@@ -25,6 +25,8 @@ public class SkieurDAO {
         String BASEDEDONNEES_USAGER = "postgres";
         String BASEDEDONNEES_MOTDEPASSE = "toto";
 
+        List<Skieur> listeSkieur = new ArrayList<Skieur>();
+
         try {
             Class.forName(BASEDEDONNEES_DRIVER);
         } catch (ClassNotFoundException e) {
@@ -38,6 +40,7 @@ public class SkieurDAO {
             ResultSet curseurListeSkieurs = requeteListeSkieurs.executeQuery("SELECT * FROM skieur");
 
 
+
             while (curseurListeSkieurs.next())
             {
                 String nom = curseurListeSkieurs.getString("nom");
@@ -46,11 +49,13 @@ public class SkieurDAO {
                 String poids = curseurListeSkieurs.getString("poids");
 
                 System.out.println("nom:"+nom+" prenom:"+prenom+" age:"+age+" poids"+poids);
+                listeSkieur.add(new Skieur(nom,prenom,age,poids));
+
             }
         } catch (SQLException e) {
             e.printStackTrace();
         }
 
-        return simulerListeSkieur();
+        return listeSkieur;
     }
 }
