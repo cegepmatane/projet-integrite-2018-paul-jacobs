@@ -36,14 +36,17 @@ public class SkieurDAO {
 
             Statement requeteListeSkieurs = connection.createStatement();
             ResultSet curseurListeSkieurs = requeteListeSkieurs.executeQuery("SELECT * FROM skieur");
-            curseurListeSkieurs.next();
 
-            String nom = curseurListeSkieurs.getString("nom");
-            String prenom = curseurListeSkieurs.getString("prenom");
-            String age = curseurListeSkieurs.getString("age");
-            String poids = curseurListeSkieurs.getString("poids");
 
-            System.out.println("nom:"+nom+" prenom:"+prenom+" age:"+age+" poids"+poids);
+            while (curseurListeSkieurs.next())
+            {
+                String nom = curseurListeSkieurs.getString("nom");
+                String prenom = curseurListeSkieurs.getString("prenom");
+                String age = curseurListeSkieurs.getString("age");
+                String poids = curseurListeSkieurs.getString("poids");
+
+                System.out.println("nom:"+nom+" prenom:"+prenom+" age:"+age+" poids"+poids);
+            }
         } catch (SQLException e) {
             e.printStackTrace();
         }
