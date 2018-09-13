@@ -12,21 +12,10 @@ public class SkieurDAO {
     private String BASEDEDONNEES_URL = "jdbc:postgresql://localhost:5432/skieur";
     private String BASEDEDONNEES_USAGER = "postgres";
     private String BASEDEDONNEES_MOTDEPASSE = "toto";
-    Connection connection;
+    Connection connection=null;
 
     public SkieurDAO(){
-         try {
-            Class.forName(BASEDEDONNEES_DRIVER);
-         }catch (ClassNotFoundException e) {
-            e.printStackTrace();
-         }
-
-         try {
-             connection = DriverManager.getConnection(BASEDEDONNEES_URL, BASEDEDONNEES_USAGER, BASEDEDONNEES_MOTDEPASSE);
-         } catch (SQLException e) {
-             e.printStackTrace();
-         }
-
+        this.connection = BaseDeDonnees.getInstance().getConnection();
     }
 
      /*private List<Skieur> simulerListeSkieur(){
