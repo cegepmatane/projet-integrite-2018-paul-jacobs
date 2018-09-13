@@ -1,12 +1,13 @@
 package modele;
 
 public class Skieur {
-	
+
+	protected int id;
  	protected String nom;
 	protected String prenom;
 	protected String age;
 	protected String poids;
-	
+
 	public Skieur(String nom) {
 		super();
 		this.nom = nom;
@@ -32,6 +33,18 @@ public class Skieur {
 		this.age = age;
 		this.poids = poids;
 	}
+
+	public Skieur(int id, String nom, String prenom, String age, String poids) {
+		this.id = id;
+		this.nom = nom;
+		this.prenom = prenom;
+		this.age = age;
+		this.poids = poids;
+	}
+
+	public int getId() { return id; }
+
+	public void setId(int id) { this.id = id; }
 
 	public String getNom() {
 		return nom;

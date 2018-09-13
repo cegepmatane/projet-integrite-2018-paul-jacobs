@@ -15,11 +15,11 @@ public class SkieurDAO {
     Connection connection;
 
     public SkieurDAO(){
-     try {
-        Class.forName(BASEDEDONNEES_DRIVER);
-     }catch (ClassNotFoundException e) {
-        e.printStackTrace();
-     }
+         try {
+            Class.forName(BASEDEDONNEES_DRIVER);
+         }catch (ClassNotFoundException e) {
+            e.printStackTrace();
+         }
 
          try {
              connection = DriverManager.getConnection(BASEDEDONNEES_URL, BASEDEDONNEES_USAGER, BASEDEDONNEES_MOTDEPASSE);
@@ -27,9 +27,9 @@ public class SkieurDAO {
              e.printStackTrace();
          }
 
-     }
+    }
 
-     private List<Skieur> simulerListeSkieur(){
+     /*private List<Skieur> simulerListeSkieur(){
 
         List<Skieur> listeSkieur = new ArrayList<Skieur>();
 
@@ -37,7 +37,7 @@ public class SkieurDAO {
         listeSkieur.add(new Skieur("Jacobs", "paul", "18 ans", "70 kg"));
 
         return listeSkieur;
-    }
+    }*/
 
     public List<Skieur> listerSkieur() {
 
@@ -50,12 +50,13 @@ public class SkieurDAO {
             ResultSet curseurListeSkieurs = requeteListeSkieurs.executeQuery("SELECT * FROM skieur");
              while (curseurListeSkieurs.next())
              {
+                 int id = curseurListeSkieurs.getInt("id");
                  String nom = curseurListeSkieurs.getString("nom");
                  String prenom = curseurListeSkieurs.getString("prenom");
                  String age = curseurListeSkieurs.getString("age");
                  String poids = curseurListeSkieurs.getString("poids");
 
-                 listeSkieur.add(new Skieur(nom,prenom,age,poids));
+                 listeSkieur.add(new Skieur(id,nom,prenom,age,poids));
 
              }
         } catch (SQLException e) {
@@ -76,6 +77,26 @@ public class SkieurDAO {
                     skieur.getPrenom()+"','"+
                     skieur.getAge()+"','"+
                     skieur.getPoids()+"')";
+            Statement requeteAjouterSkieurs = connection.createStatement();
+            requeteAjouterSkieurs.execute(requeteSQLAjouterSkieur);
+
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public void modifierSkieur(Skieur skieur) {
+        try {
+            connection = DriverManager.getConnection(BASEDEDONNEES_URL, BASEDEDONNEES_USAGER, BASEDEDONNEES_MOTDEPASSE);
+
+            String requeteSQLAjouterSkieur = "UPDATE skieur SET nom='"+skieur.getNom()+"',prenom='"+
+                    skieur.getPrenom()+"',age='"+
+                    skieur.getAge()+"',poids='"+
+                    skieur.getPoids()+"' WHERE id = '"+skieur.getId()+"';";
+
+            System.out.println(requeteSQLAjouterSkieur);
+
             Statement requeteAjouterSkieurs = connection.createStatement();
             requeteAjouterSkieurs.execute(requeteSQLAjouterSkieur);
 

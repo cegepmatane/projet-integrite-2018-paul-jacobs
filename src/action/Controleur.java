@@ -38,7 +38,7 @@ public class Controleur {
 
     public void modifierSkieur(Skieur skieur)
     {
-        System.out.println(skieur);
+        this.skieurDAO.modifierSkieur(skieur);
         vueListeSkieur.afficherListeSkieur(skieurDAO.listerSkieur());
         this.navigateurVueSkieur.naviguerVersVueListeSkieur();
     }
