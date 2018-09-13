@@ -33,6 +33,7 @@ public class NavigateurVueSkieur extends Application{
         this.vueSkieur.setControleur(this.controleur);
         this.vueListeSkieur.setControleur(this.controleur);
         this.vueAjouterSkieur.setControleur(this.controleur);
+        this.vueModifierSkieur.setControleur(this.controleur);
 	}
 
     public void naviguerVersVueSkieur(){
