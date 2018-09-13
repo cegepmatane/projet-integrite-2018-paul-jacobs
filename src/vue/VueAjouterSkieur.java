@@ -32,7 +32,7 @@ public class VueAjouterSkieur extends Scene{
             @Override
             public void handle(ActionEvent event) {
                 Skieur skieur = demanderSkieur();
-                controleur.enregistrerSkieur(skieur);
+                controleur.ajouterSkieur(skieur);
             }
         });
 

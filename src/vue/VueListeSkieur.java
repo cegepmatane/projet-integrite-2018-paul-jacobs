@@ -43,19 +43,19 @@ import java.util.List;
 		int numero = 0;
 		this.grilleSkieurs.add(new Label("Nom"), 0, numero);
 		this.grilleSkieurs.add(new Label("Prenom"), 1, numero);
-		for(Skieur mouton : listeSkieurs)
+		for(Skieur skieur : listeSkieurs)
 		{
             Button actionModifierSkieur = new Button("modifier");
             actionModifierSkieur.setOnAction(new EventHandler<ActionEvent>() {
                 @Override
                 public void handle(ActionEvent event) {
-                    controleur.navigaterVersVueModifierSkieur();
+                    controleur.naviguerVersVueModifierSkieur(skieur);
                 }
             });
 
 			numero++;
-			this.grilleSkieurs.add(new Label(mouton.getNom()), 0, numero);
-			this.grilleSkieurs.add(new Label(mouton.getPrenom()), 1, numero);
+			this.grilleSkieurs.add(new Label(skieur.getNom()), 0, numero);
+			this.grilleSkieurs.add(new Label(skieur.getPrenom()), 1, numero);
 			this.grilleSkieurs.add(actionModifierSkieur, 2, numero);
 			this.grilleSkieurs.add(new Button("supprimer"), 3, numero);
 		}

@@ -2,10 +2,7 @@ package action;
 
 import donnee.SkieurDAO;
 import modele.Skieur;
-import vue.NavigateurVueSkieur;
-import vue.VueAjouterSkieur;
-import vue.VueListeSkieur;
-import vue.VueSkieur;
+import vue.*;
 
 public class Controleur {
 
@@ -14,6 +11,7 @@ public class Controleur {
     private VueSkieur vueSkieur;
     private VueListeSkieur vueListeSkieur;
     private VueAjouterSkieur vueAjouterSkieur;
+    private VueModifierSkieur vueModifierSkieur;
     private NavigateurVueSkieur navigateurVueSkieur;
     private SkieurDAO skieurDAO;
 
@@ -23,6 +21,7 @@ public class Controleur {
         this.vueSkieur = this.navigateurVueSkieur.getVueSkieur();
         this.vueListeSkieur = this.navigateurVueSkieur.getVueListeSkieur();
         this.vueAjouterSkieur = this.navigateurVueSkieur.getVueAjouterSkieur();
+        this.vueModifierSkieur = this.navigateurVueSkieur.getVueModifierSkieur();
         this.skieurDAO = new SkieurDAO();
 
         vueListeSkieur.afficherListeSkieur(skieurDAO.listerSkieur());
@@ -30,21 +29,27 @@ public class Controleur {
         this.navigateurVueSkieur.naviguerVersVueListeSkieur();
     }
 
-    public void enregistrerSkieur(Skieur skieur)
+    public void ajouterSkieur(Skieur skieur)
     {
         this.skieurDAO.ajouterSkieur(skieur);
         vueListeSkieur.afficherListeSkieur(skieurDAO.listerSkieur());
         this.navigateurVueSkieur.naviguerVersVueListeSkieur();
     }
 
+    public void modifierSkieur(Skieur skieur)
+    {
+
+    }
+
+    public void naviguerVersVueModifierSkieur(Skieur skieur)
+    {
+        vueModifierSkieur.afficherGrillerModifierSkieur(skieur);
+        this.navigateurVueSkieur.naviguerVersVueModifierSkieur();
+    }
+
     public void naviguerVersVueAjouterSkieur()
     {
         this.navigateurVueSkieur.naviguerVersVueAjouterSkieur();
-    }
-
-    public void navigaterVersVueModifierSkieur()
-    {
-        this.navigateurVueSkieur.naviguerVersVueModifierSkieur();
     }
 
     //debut singleton
