@@ -39,6 +39,7 @@ public class VueModifierSkieur extends Scene {
 
     public void afficherGrillerModifierSkieur(Skieur skieur)
     {
+        this.grilleModifierSkieur.getChildren().clear();
         this.grilleModifierSkieur.add(new Label("Nom : "), 0, 0);
         this.grilleModifierSkieur.add(new Label("Prenom : "), 0, 1);
         this.grilleModifierSkieur.add(new Label("Age : "), 0, 2);

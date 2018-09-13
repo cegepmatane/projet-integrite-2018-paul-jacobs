@@ -3,7 +3,6 @@ package vue;
 import action.Controleur;
 import javafx.application.Application;
 import javafx.stage.Stage;
-import modele.Skieur;
 
 public class NavigateurVueSkieur extends Application{
 

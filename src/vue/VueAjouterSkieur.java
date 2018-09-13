@@ -11,8 +11,6 @@ import javafx.scene.layout.GridPane;
 import javafx.scene.layout.VBox;
 import modele.Skieur;
 
-import java.util.EventListener;
-
 public class VueAjouterSkieur extends Scene{
  	 protected TextField valeurNom;
 	 protected TextField valeurPrenom;
@@ -35,6 +33,8 @@ public class VueAjouterSkieur extends Scene{
                 controleur.ajouterSkieur(skieur);
             }
         });
+
+		grilleSkieur.getChildren().clear();
 
 		 valeurNom = new TextField();
 		 grilleSkieur.add(new Label("Nom : "), 0, 0);
