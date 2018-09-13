@@ -9,6 +9,7 @@ public class NavigateurVueSkieur extends Application{
 	private VueSkieur vueSkieur;
 	private VueListeSkieur vueListeSkieur;
 	private VueAjouterSkieur vueAjouterSkieur;
+	private VueModifierSkieur vueModifierSkieur;
 	private Stage stade;
     private Controleur controleur;
 
@@ -19,6 +20,7 @@ public class NavigateurVueSkieur extends Application{
 		this.vueSkieur = new VueSkieur();
 		this.vueListeSkieur = new VueListeSkieur();
 		this.vueAjouterSkieur = new VueAjouterSkieur();
+		this.vueModifierSkieur = new VueModifierSkieur();
 
         this.stade.setScene(null); //a null pour afficher la page et eviter bog controleur
         this.stade.show();
@@ -48,6 +50,11 @@ public class NavigateurVueSkieur extends Application{
 		this.stade.setScene(this.vueAjouterSkieur);
 		this.stade.show();
 	}
+
+	public void naviguerVersVueModifierSkieur(){
+        this.stade.setScene(this.vueModifierSkieur);
+        this.stade.show();
+    }
 
     public VueSkieur getVueSkieur() {
         return vueSkieur;

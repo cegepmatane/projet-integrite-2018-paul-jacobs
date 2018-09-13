@@ -32,7 +32,6 @@ public class Controleur {
 
     public void enregistrerSkieur(Skieur skieur)
     {
-        System.out.println(skieur);
         this.skieurDAO.ajouterSkieur(skieur);
         vueListeSkieur.afficherListeSkieur(skieurDAO.listerSkieur());
         this.navigateurVueSkieur.naviguerVersVueListeSkieur();
@@ -41,6 +40,11 @@ public class Controleur {
     public void naviguerVersVueAjouterSkieur()
     {
         this.navigateurVueSkieur.naviguerVersVueAjouterSkieur();
+    }
+
+    public void navigaterVersVueModifierSkieur()
+    {
+        this.navigateurVueSkieur.naviguerVersVueModifierSkieur();
     }
 
     //debut singleton
