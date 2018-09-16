@@ -11,6 +11,7 @@ public class NavigateurVueSkieur extends Application{
 	private VueAjouterSkieur vueAjouterSkieur;
 	private VueModifierSkieur vueModifierSkieur;
 	private VueModifierPrix vueModifierPrix;
+	private VueAjouterPrix vueAjouterPrix;
 	private Stage stade;
     private Controleur controleur;
 
@@ -23,6 +24,7 @@ public class NavigateurVueSkieur extends Application{
 		this.vueAjouterSkieur = new VueAjouterSkieur();
 		this.vueModifierSkieur = new VueModifierSkieur();
 		this.vueModifierPrix = new VueModifierPrix();
+		this.vueAjouterPrix = new VueAjouterPrix();
 
         this.stade.setScene(null); //a null pour afficher la page et eviter bog controleur
         this.stade.show();
@@ -64,6 +66,11 @@ public class NavigateurVueSkieur extends Application{
         this.stade.show();
     }
 
+    public void naviguerVersVueAjouterPrix(){
+        this.stade.setScene(this.vueAjouterPrix);
+        this.stade.show();
+    }
+
     public VueSkieur getVueSkieur() {
         return vueSkieur;
     }
@@ -79,4 +86,6 @@ public class NavigateurVueSkieur extends Application{
     public VueModifierSkieur getVueModifierSkieur() { return vueModifierSkieur; }
 
     public VueModifierPrix getVueModifierPrix() { return vueModifierPrix; }
+
+    public VueAjouterPrix getVueAjouterPrix() { return vueAjouterPrix; }
 }

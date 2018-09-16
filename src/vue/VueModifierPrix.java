@@ -24,20 +24,20 @@ public class VueModifierPrix extends Scene {
 
     public void afficherVueModifierPrix(Prix prix){
         this.grilleModifierPrix.add(new Label("Nom : "), 0, 0);
-        this.grilleModifierPrix.add(new Label("Prenom : "), 0, 1);
-        this.grilleModifierPrix.add(new Label("Age : "), 0, 2);
-        this.grilleModifierPrix.add(new Label("Place : "), 0, 3);
+        this.grilleModifierPrix.add(new Label("Prenom : "), 1, 0);
+        this.grilleModifierPrix.add(new Label("Age : "), 2, 0);
+        this.grilleModifierPrix.add(new Label("Place : "), 3, 0);
 
         valeurNom = new TextField(prix.getNomPrix());
         valeurDate = new TextField(prix.getDatePrix());
         valeurTemps = new TextField(prix.getTemps());
         valeurPlace = new TextField(prix.getPlace());
 
-        this.grilleModifierPrix.add(valeurNom,1,0);
+        this.grilleModifierPrix.add(valeurNom,0,1);
         this.grilleModifierPrix.add(valeurDate,1,1);
-        this.grilleModifierPrix.add(valeurTemps,1,2);
-        this.grilleModifierPrix.add(valeurPlace ,1,3);
+        this.grilleModifierPrix.add(valeurTemps,2,1);
+        this.grilleModifierPrix.add(valeurPlace ,3,1);
 
-        this.grilleModifierPrix.add(new Button("enregistrer"),2,0);
+        this.grilleModifierPrix.add(new Button("enregistrer"),0,2);
     }
 }

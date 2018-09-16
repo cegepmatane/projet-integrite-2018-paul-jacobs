@@ -14,6 +14,7 @@ public class Controleur {
     private VueAjouterSkieur vueAjouterSkieur;
     private VueModifierSkieur vueModifierSkieur;
     private VueModifierPrix vueModifierPrix;
+    private VueAjouterPrix vueAjouterPrix;
     private NavigateurVueSkieur navigateurVueSkieur;
     private SkieurDAO skieurDAO;
 
@@ -25,10 +26,15 @@ public class Controleur {
         this.vueAjouterSkieur = this.navigateurVueSkieur.getVueAjouterSkieur();
         this.vueModifierSkieur = this.navigateurVueSkieur.getVueModifierSkieur();
         this.vueModifierPrix = this.navigateurVueSkieur.getVueModifierPrix();
+        this.vueAjouterPrix = this.navigateurVueSkieur.getVueAjouterPrix();
+
         this.skieurDAO = new SkieurDAO();
 
-        vueModifierPrix.afficherVueModifierPrix(new Prix("temps","temps","temps","temps","temps"));
-        this.navigateurVueSkieur.naviguerVersVueModifierPrix();
+        vueAjouterPrix.afficherVueAjouterPrix();
+        this.navigateurVueSkieur.naviguerVersVueAjouterPrix();
+
+        //vueModifierPrix.afficherVueModifierPrix(new Prix("temps","temps","temps","temps","temps"));
+        //this.navigateurVueSkieur.naviguerVersVueModifierPrix();
 
         //vueListeSkieur.afficherListeSkieur(skieurDAO.listerSkieur());
 
