@@ -1,6 +1,7 @@
 package action;
 
 import donnee.SkieurDAO;
+import modele.Prix;
 import modele.Skieur;
 import vue.*;
 
@@ -12,6 +13,7 @@ public class Controleur {
     private VueListeSkieur vueListeSkieur;
     private VueAjouterSkieur vueAjouterSkieur;
     private VueModifierSkieur vueModifierSkieur;
+    private VueModifierPrix vueModifierPrix;
     private NavigateurVueSkieur navigateurVueSkieur;
     private SkieurDAO skieurDAO;
 
@@ -22,11 +24,15 @@ public class Controleur {
         this.vueListeSkieur = this.navigateurVueSkieur.getVueListeSkieur();
         this.vueAjouterSkieur = this.navigateurVueSkieur.getVueAjouterSkieur();
         this.vueModifierSkieur = this.navigateurVueSkieur.getVueModifierSkieur();
+        this.vueModifierPrix = this.navigateurVueSkieur.getVueModifierPrix();
         this.skieurDAO = new SkieurDAO();
 
-        vueListeSkieur.afficherListeSkieur(skieurDAO.listerSkieur());
+        vueModifierPrix.afficherVueModifierPrix(new Prix("temps","temps","temps","temps","temps"));
+        this.navigateurVueSkieur.naviguerVersVueModifierPrix();
 
-        this.navigateurVueSkieur.naviguerVersVueListeSkieur();
+        //vueListeSkieur.afficherListeSkieur(skieurDAO.listerSkieur());
+
+        //this.navigateurVueSkieur.naviguerVersVueListeSkieur();
     }
 
     public void ajouterSkieur(Skieur skieur)
