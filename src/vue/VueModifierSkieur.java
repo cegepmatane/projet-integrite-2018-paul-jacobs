@@ -8,7 +8,11 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.GridPane;
+import modele.Prix;
 import modele.Skieur;
+
+import java.util.ArrayList;
+import java.util.List;
 
 
 public class VueModifierSkieur extends Scene {
@@ -52,6 +56,8 @@ public class VueModifierSkieur extends Scene {
         this.grilleModifierSkieur.add(new Label("Age : "), 0, 2);
         this.grilleModifierSkieur.add(new Label("Poids : "), 0, 3);
 
+
+
         valeurNom = new TextField(skieur.getNom());
         valeurPrenom = new TextField(skieur.getPrenom());
         valeurAge = new TextField(skieur.getAge());
@@ -62,25 +68,52 @@ public class VueModifierSkieur extends Scene {
         this.grilleModifierSkieur.add(valeurAge,1,2);
         this.grilleModifierSkieur.add(valeurPoids,1,3);
         this.grilleAffichage.add(grilleModifierSkieur,0,0);
-        afficherGrillePrix();
+        afficherGrillePrix(skieur);
         this.grilleAffichage.add(actionModifierSkieur,0,5);
 
     }
 
-    private void afficherGrillePrix()
+    private void afficherGrillePrix(Skieur skieur)
     {
+        List<Prix> listePrix = new ArrayList<>();
         grilleAffichagePrix.add(new Label("nom"),0,0);
         grilleAffichagePrix.add(new Label("date"),1,0);
         grilleAffichagePrix.add(new Label("temps"),2,0);
         grilleAffichagePrix.add(new Label("place"),3,0);
 
-        grilleAffichagePrix.add(new Label("prix1"), 0,1);
-        grilleAffichagePrix.add(new Label("00-00-0000"), 1,1);
-        grilleAffichagePrix.add(new Label("1'10"), 2,1);
-        grilleAffichagePrix.add(new Label("1"), 3,1);
+        listePrix.add(new Prix("0", "trophee", "00-00-0000", "1s","1er"));
+        listePrix.add(new Prix("1", "tropheee", "00-00-0000", "1s","1er"));
+        listePrix.add(new Prix("2", "tropheee", "00-00-0000", "1s","1er"));
 
-        grilleAffichagePrix.add(new Button("modifier"), 4, 1);
-        grilleAffichagePrix.add(new Button("supprimer"), 5, 1);
+        int numero = 0;
+        for(Prix prix : listePrix)
+        {
+            Button actionModifierPrix = new Button("modifier");
+            actionModifierPrix.setOnAction(new EventHandler<ActionEvent>() {
+                @Override
+                public void handle(ActionEvent event) {
+                    controleur.naviguerVersVueModifierPrix(prix, skieur);
+                }
+            });
+
+            numero++;
+            grilleAffichagePrix.add(new Label(prix.getNomPrix()), 0,numero);
+            grilleAffichagePrix.add(new Label(prix.getDatePrix()), 1,numero);
+            grilleAffichagePrix.add(new Label(prix.getTemps()), 2,numero);
+            grilleAffichagePrix.add(new Label(prix.getPlace()), 3,numero);
+            this.grilleAffichagePrix.add(actionModifierPrix, 4, numero);
+            grilleAffichagePrix.add(new Button("supprimer"), 5, numero);
+        }
+
+        Button actionAjouterPrix = new Button("ajouter");
+        actionAjouterPrix.setOnAction(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent event) {
+                controleur.naviguerVersVueAjouterPrix();
+            }
+        });
+
+        this.grilleAffichagePrix.add(actionAjouterPrix,0,numero+1);
 
         this.grilleAffichage.add(grilleAffichagePrix,0,4);
     }

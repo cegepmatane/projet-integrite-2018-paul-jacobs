@@ -18,9 +18,7 @@ public class VueAjouterPrix extends Scene {
     public VueAjouterPrix() {
         super(new GridPane(),400,400);
         grilleAjouterPrix = (GridPane) this.getRoot();
-    }
 
-    public void afficherVueAjouterPrix(){
         this.grilleAjouterPrix.add(new Label("Nom : "), 0, 0);
         this.grilleAjouterPrix.add(new Label("Prenom : "), 1, 0);
         this.grilleAjouterPrix.add(new Label("Age : "), 2, 0);

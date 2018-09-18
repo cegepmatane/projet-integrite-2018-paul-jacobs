@@ -6,6 +6,7 @@ import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.GridPane;
 import modele.Prix;
+import modele.Skieur;
 import sun.security.acl.GroupImpl;
 
 public class VueModifierPrix extends Scene {
@@ -22,7 +23,7 @@ public class VueModifierPrix extends Scene {
         grilleModifierPrix = (GridPane) this.getRoot();
     }
 
-    public void afficherVueModifierPrix(Prix prix){
+    public void afficherVueModifierPrix(Prix prix, Skieur skieur){
         this.grilleModifierPrix.add(new Label("Nom : "), 0, 0);
         this.grilleModifierPrix.add(new Label("Prenom : "), 1, 0);
         this.grilleModifierPrix.add(new Label("Age : "), 2, 0);

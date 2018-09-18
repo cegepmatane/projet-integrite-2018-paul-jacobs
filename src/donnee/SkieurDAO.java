@@ -8,10 +8,6 @@ import java.util.List;
 
 public class SkieurDAO {
 
-    private String BASEDEDONNEES_DRIVER = "org.postgresql.Driver";
-    private String BASEDEDONNEES_URL = "jdbc:postgresql://localhost:5432/skieur";
-    private String BASEDEDONNEES_USAGER = "postgres";
-    private String BASEDEDONNEES_MOTDEPASSE = "toto";
     Connection connection=null;
 
     public SkieurDAO(){
@@ -55,12 +51,15 @@ public class SkieurDAO {
         return listeSkieur;
     }
 
+    public void raporterSkieur()
+    {
+
+    }
+
     public void ajouterSkieur(Skieur skieur)
     {
 
         try {
-            connection = DriverManager.getConnection(BASEDEDONNEES_URL, BASEDEDONNEES_USAGER, BASEDEDONNEES_MOTDEPASSE);
-
             String requeteSQLAjouterSkieur = "INSERT  INTO skieur(nom,prenom,age,poids) VALUES('"+
                     skieur.getNom()+"','"+
                     skieur.getPrenom()+"','"+
@@ -77,8 +76,6 @@ public class SkieurDAO {
 
     public void modifierSkieur(Skieur skieur) {
         try {
-            connection = DriverManager.getConnection(BASEDEDONNEES_URL, BASEDEDONNEES_USAGER, BASEDEDONNEES_MOTDEPASSE);
-
             String requeteSQLAjouterSkieur = "UPDATE skieur SET nom='"+skieur.getNom()+"',prenom='"+
                     skieur.getPrenom()+"',age='"+
                     skieur.getAge()+"',poids='"+
@@ -93,5 +90,10 @@ public class SkieurDAO {
         } catch (SQLException e) {
             e.printStackTrace();
         }
+    }
+
+    public void supprimerSkieur(Skieur skieur)
+    {
+
     }
 }
