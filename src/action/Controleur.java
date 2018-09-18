@@ -1,5 +1,6 @@
 package action;
 
+import donnee.PrixDAO;
 import donnee.SkieurDAO;
 import modele.Prix;
 import modele.Skieur;
@@ -17,6 +18,7 @@ public class Controleur {
     private VueAjouterPrix vueAjouterPrix;
     private NavigateurVueSkieur navigateurVueSkieur;
     private SkieurDAO skieurDAO;
+    private PrixDAO prixDAO;
 
     private Controleur(NavigateurVueSkieur navigateurVueSkieur){
         this.navigateurVueSkieur = navigateurVueSkieur;
@@ -29,16 +31,16 @@ public class Controleur {
         this.vueAjouterPrix = this.navigateurVueSkieur.getVueAjouterPrix();
 
         this.skieurDAO = new SkieurDAO();
+        this.prixDAO = new PrixDAO();
 
-        vueAjouterPrix.afficherVueAjouterPrix();
-        this.navigateurVueSkieur.naviguerVersVueAjouterPrix();
+        //vueAjouterPrix.afficherVueAjouterPrix();
+        //this.navigateurVueSkieur.naviguerVersVueAjouterPrix();
 
         //vueModifierPrix.afficherVueModifierPrix(new Prix("temps","temps","temps","temps","temps"));
         //this.navigateurVueSkieur.naviguerVersVueModifierPrix();
 
-        //vueListeSkieur.afficherListeSkieur(skieurDAO.listerSkieur());
-
-        //this.navigateurVueSkieur.naviguerVersVueListeSkieur();
+        vueListeSkieur.afficherListeSkieur(skieurDAO.listerSkieur());
+        this.navigateurVueSkieur.naviguerVersVueListeSkieur();
     }
 
     public void ajouterSkieur(Skieur skieur)
@@ -64,6 +66,28 @@ public class Controleur {
     public void naviguerVersVueAjouterSkieur()
     {
         this.navigateurVueSkieur.naviguerVersVueAjouterSkieur();
+    }
+
+    public void naviguerVersVueAjouterPrix() { this.navigateurVueSkieur.naviguerVersVueAjouterPrix(); }
+
+    public void naviguerVersVueModifierPrix(Prix prix, Skieur skieur)
+    {
+        vueModifierPrix.afficherVueModifierPrix(prix, skieur);
+        this.navigateurVueSkieur.naviguerVersVueModifierPrix();
+    }
+
+    public void ajouterPrix(Skieur skieur, Prix prix)
+    {
+        this.prixDAO.ajouterPrix(skieur, prix);
+        vueListeSkieur.afficherListeSkieur(skieurDAO.listerSkieur());
+        this.navigateurVueSkieur.naviguerVersVueListeSkieur();
+    }
+
+    public void modifierPrix(Skieur skieur, Prix prix)
+    {
+        this.prixDAO.modifierPrix(skieur, prix);
+        vueListeSkieur.afficherListeSkieur(skieurDAO.listerSkieur());
+        this.navigateurVueSkieur.naviguerVersVueListeSkieur();
     }
 
     //debut singleton
