@@ -37,12 +37,13 @@ public class PrixDAO {
             ResultSet curseurListePrix = requeteListeSkieurs.executeQuery("SELECT * FROM prix WHERE id_skieur ="+skieur.getId());
             while (curseurListePrix.next())
             {
-                String idSkieur = Integer.toString(skieur.getId());
+                String id = curseurListePrix.getString("id");
+                String idSkieur = curseurListePrix.getString("id_skieur");
                 String titre = curseurListePrix.getString("titre");
                 String date = curseurListePrix.getString("date_prix");
                 String temps = curseurListePrix.getString("temps");
 
-                listeSkieur.add(raporterprix(idSkieur,titre,date,temps));
+                listeSkieur.add(raporterprix(id,idSkieur,titre,date,temps));
 
             }
         } catch (SQLException e) {
@@ -52,26 +53,40 @@ public class PrixDAO {
         return listeSkieur;
     }
 
-    public Prix raporterprix(String idSkieur, String titre, String date, String temps)
+    public Prix raporterprix(String id, String idSkieur, String titre, String date, String temps)
     {
-        return new Prix(idSkieur,titre, date,temps);
+        return new Prix(id, idSkieur,titre, date,temps);
     }
 
-    public void modifierPrix(Skieur skieur, Prix prix)
+    public void modifierPrix(Prix prix)
     {
+        try {
+            String requeteSQLAjouterPrix = "UPDATE prix SET titre='"+
+                    prix.getTitre()+"',date_prix='"+
+                    prix.getDatePrix()+"',temps='"+
+                    prix.getTemps()+"' WHERE id = '"+prix.getIdPrix()+"';";
 
+            System.out.println(requeteSQLAjouterPrix);
+
+            Statement requeteAjouterPrix = connection.createStatement();
+            requeteAjouterPrix.execute(requeteSQLAjouterPrix);
+
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
     }
 
     public void ajouterPrix(Prix prix)
     {
         try {
-            String requeteSQLAjouterSkieur = "INSERT  INTO prix(id_skieur,date_prix,temps,titre) VALUES('"+
+            String requeteSQLAjouterPrix = "INSERT  INTO prix(id_skieur,date_prix,temps,titre) VALUES('"+
                     prix.getIdSkieur()+"','"+
                     prix.getDatePrix()+"','"+
                     prix.getTemps()+"','"+
                     prix.getTitre()+"')";
-            Statement requeteAjouterSkieurs = connection.createStatement();
-            requeteAjouterSkieurs.execute(requeteSQLAjouterSkieur);
+            Statement requeteAjouterPrix = connection.createStatement();
+            requeteAjouterPrix.execute(requeteSQLAjouterPrix);
 
 
         } catch (SQLException e) {

@@ -18,6 +18,7 @@ public class VueModifierPrix extends Scene {
     private TextField valeurNom;
     private TextField valeurDate;
     private TextField valeurTemps;
+    private TextField valeurid;
 
     private GridPane grilleModifierPrix;
     private Controleur controleur;
@@ -48,6 +49,7 @@ public class VueModifierPrix extends Scene {
         valeurNom = new TextField(prix.getTitre());
         valeurDate = new TextField(prix.getDatePrix());
         valeurTemps = new TextField(prix.getTemps());
+        valeurid = new TextField(prix.getIdPrix());
 
         this.grilleModifierPrix.add(valeurNom,0,1);
         this.grilleModifierPrix.add(valeurDate,1,1);
@@ -64,7 +66,7 @@ public class VueModifierPrix extends Scene {
 
     private Prix demanderPrix()
     {
-        return new Prix(Integer.toString(skieur.getId()),valeurNom.getText(),valeurDate.getText(),valeurTemps.getText());
+        return new Prix(valeurid.getText(),Integer.toString(skieur.getId()),valeurNom.getText(),valeurDate.getText(),valeurTemps.getText());
     }
 
 }
