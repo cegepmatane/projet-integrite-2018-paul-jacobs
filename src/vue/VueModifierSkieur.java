@@ -21,6 +21,7 @@ public class VueModifierSkieur extends Scene {
     private GridPane grilleAffichage;
     private GridPane grilleAffichagePrix;
     private GridPane grilleModifierSkieur;
+    private Skieur acualSkieur;
 
     private Controleur controleur;
     private TextField valeurNom;
@@ -44,10 +45,12 @@ public class VueModifierSkieur extends Scene {
                 controleur.modifierSkieur(skieur);
             }
         });
+
     }
 
     public void afficherGrillerModifierSkieur(Skieur skieur)
     {
+        this.acualSkieur = skieur;
         this.grilleAffichage.getChildren().clear();
         this.grilleModifierSkieur.getChildren().clear();
         this.grilleAffichagePrix.getChildren().clear();
@@ -69,6 +72,7 @@ public class VueModifierSkieur extends Scene {
         this.grilleModifierSkieur.add(valeurPoids,1,3);
         this.grilleAffichage.add(grilleModifierSkieur,0,0);
         this.grilleAffichage.add(actionModifierSkieur,0,5);
+
 
     }
 
@@ -96,7 +100,7 @@ public class VueModifierSkieur extends Scene {
             });
 
             numero++;
-            grilleAffichagePrix.add(new Label(prix.getNomPrix()), 0,numero);
+            grilleAffichagePrix.add(new Label(prix.getTitre()), 0,numero);
             grilleAffichagePrix.add(new Label(prix.getDatePrix()), 1,numero);
             grilleAffichagePrix.add(new Label(prix.getTemps()), 2,numero);
             this.grilleAffichagePrix.add(actionModifierPrix, 3, numero);
@@ -118,6 +122,7 @@ public class VueModifierSkieur extends Scene {
 
     private Skieur demanderSkieur(){
         Skieur skieur = new Skieur(
+                this.acualSkieur.getId(),
                 this.valeurNom.getText(),
                 this.valeurPrenom.getText(),
                 this.valeurAge.getText(),
