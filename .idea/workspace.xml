@@ -3,7 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="60493160-4179-4819-b97e-6f7ec32bb33b" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/src/action/Controleur.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/action/Controleur.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/vue/VueAjouterSkieur.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/vue/VueAjouterSkieur.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/vue/VueAjouterPrix.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/vue/VueAjouterPrix.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/vue/VueModifierSkieur.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/vue/VueModifierSkieur.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -91,7 +92,7 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="java" value="30" />
+          <entry key="java" value="31" />
           <entry key="skieur" value="2" />
           <entry key="sql" value="2" />
         </counts>
@@ -99,7 +100,7 @@
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="Database Element" value="2" />
-          <entry key="JAVA" value="30" />
+          <entry key="JAVA" value="31" />
           <entry key="SQL" value="1" />
           <entry key="Scratch" value="1" />
         </counts>
@@ -107,13 +108,13 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="dummy" value="4" />
-          <entry key="java" value="6781" />
+          <entry key="java" value="6942" />
           <entry key="txt" value="9" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="6780" />
+          <entry key="JAVA" value="6941" />
           <entry key="PLAIN_TEXT" value="13" />
           <entry key="SQL" value="1" />
         </counts>
@@ -125,7 +126,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/vue/NavigateurVueSkieur.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="174">
+            <state relative-caret-position="-438">
               <caret line="37" column="46" selection-start-line="37" selection-start-column="46" selection-end-line="37" selection-end-column="46" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -137,7 +138,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/vue/VueAjouterSkieur.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="316">
+            <state relative-caret-position="571">
               <caret line="67" column="37" selection-start-line="67" selection-start-column="37" selection-end-line="67" selection-end-column="37" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -161,17 +162,31 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/vue/VueModifierSkieur.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="170">
+              <caret line="109" column="60" selection-start-line="109" selection-start-column="60" selection-end-line="109" selection-end-column="60" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="method#afficherGrillerModifierSkieur#0;class#VueModifierSkieur#0" />
+                <element signature="e#3966#3967#0" expanded="true" />
+                <element signature="e#4037#4038#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/action/Controleur.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="408">
-              <caret line="67" column="4" selection-start-line="67" selection-start-column="4" selection-end-line="67" selection-end-column="4" />
+            <state relative-caret-position="138">
+              <caret line="75" column="40" selection-start-line="75" selection-start-column="40" selection-end-line="75" selection-end-column="40" />
               <folding>
                 <element signature="method#Controleur#0;class#Controleur#0" />
                 <element signature="method#ajouterSkieur#0;class#Controleur#0" />
                 <element signature="method#modifierSkieur#0;class#Controleur#0" />
                 <element signature="method#naviguerVersVueModifierSkieur#0;class#Controleur#0" />
                 <element signature="method#naviguerVersVueAjouterSkieur#0;class#Controleur#0" />
-                <element signature="method#naviguerVersVueAjouterPrix#0;class#Controleur#0" />
                 <element signature="method#naviguerVersVueModifierPrix#0;class#Controleur#0" />
                 <element signature="method#ajouterPrix#0;class#Controleur#0" />
                 <element signature="method#modifierPrix#0;class#Controleur#0" />
@@ -182,24 +197,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/vue/VueModifierSkieur.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-642">
-              <caret line="40" column="13" lean-forward="true" selection-start-line="40" selection-start-column="13" selection-end-line="40" selection-end-column="13" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="method#afficherGrillerModifierSkieur#0;class#VueModifierSkieur#0" />
-                <element signature="method#demandeSkieur#0;class#VueModifierSkieur#0" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/vue/VueModifierPrix.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-251">
-              <caret line="33" column="42" selection-start-line="33" selection-start-column="42" selection-end-line="33" selection-end-column="42" />
+            <state relative-caret-position="89">
+              <caret line="17" column="4" selection-start-line="17" selection-start-column="4" selection-end-line="20" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -210,12 +211,12 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/vue/VueAjouterPrix.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="36" column="46" lean-forward="true" selection-start-line="36" selection-start-column="46" selection-end-line="36" selection-end-column="46" />
+            <state relative-caret-position="232">
+              <caret line="67" column="24" selection-start-line="67" selection-start-column="24" selection-end-line="67" selection-end-column="24" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="method#nettoyer#0;class#VueAjouterPrix#0" />
-                <element signature="method#demanderPrix#0;class#VueAjouterPrix#0" />
+                <element signature="e#1385#1386#0" expanded="true" />
+                <element signature="e#1430#1431#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -293,10 +294,10 @@
         <option value="$PROJECT_DIR$/src/vue/NavigateurVueSkieur.java" />
         <option value="$PROJECT_DIR$/src/donnee/PrixDAO.java" />
         <option value="$PROJECT_DIR$/src/vue/VueModifierPrix.java" />
-        <option value="$PROJECT_DIR$/src/vue/VueModifierSkieur.java" />
-        <option value="$PROJECT_DIR$/src/vue/VueAjouterPrix.java" />
         <option value="$PROJECT_DIR$/src/vue/VueAjouterSkieur.java" />
         <option value="$PROJECT_DIR$/src/action/Controleur.java" />
+        <option value="$PROJECT_DIR$/src/vue/VueAjouterPrix.java" />
+        <option value="$PROJECT_DIR$/src/vue/VueModifierSkieur.java" />
       </list>
     </option>
   </component>
@@ -495,7 +496,7 @@
     <property name="DatabaseDriversLRU" value="postgresql" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1537245074246" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1537325874817" />
     <property name="database.console.LAST_STATE" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/lib/postgresql-42.1.4.jar!/" />
     <property name="project.structure.last.edited" value="Libraries" />
@@ -574,18 +575,18 @@
       <workItem from="1537220639463" duration="8684000" />
       <workItem from="1537307571727" duration="145000" />
       <workItem from="1537307849935" duration="2154000" />
-      <workItem from="1537324087118" duration="1307000" />
+      <workItem from="1537324087118" duration="1773000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="63408000" />
+    <option name="totallyTimeSpent" value="63874000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="754" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.19742814" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.19742814" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -595,7 +596,7 @@
       <window_info id="Favorites" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49848714" visible="true" weight="0.28548387" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49848714" weight="0.28548387" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -604,7 +605,7 @@
       <window_info anchor="bottom" id="Database Changes" order="8" />
       <window_info anchor="bottom" id="Terminal" order="9" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5015129" side_tool="true" weight="0.32903227" />
-      <window_info anchor="bottom" id="Messages" order="11" weight="0.32903227" />
+      <window_info active="true" anchor="bottom" id="Messages" order="11" visible="true" weight="0.32903227" />
       <window_info anchor="bottom" id="Database Console" order="12" weight="0.32903227" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -713,7 +714,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/vue/NavigateurVueSkieur.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="174">
+        <state relative-caret-position="-438">
           <caret line="37" column="46" selection-start-line="37" selection-start-column="46" selection-end-line="37" selection-end-column="46" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -721,43 +722,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/vue/VueModifierPrix.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-251">
-          <caret line="33" column="42" selection-start-line="33" selection-start-column="42" selection-end-line="33" selection-end-column="42" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/vue/VueModifierSkieur.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-642">
-          <caret line="40" column="13" lean-forward="true" selection-start-line="40" selection-start-column="13" selection-end-line="40" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#afficherGrillerModifierSkieur#0;class#VueModifierSkieur#0" />
-            <element signature="method#demandeSkieur#0;class#VueModifierSkieur#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/vue/VueAjouterPrix.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="36" column="46" lean-forward="true" selection-start-line="36" selection-start-column="46" selection-end-line="36" selection-end-column="46" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#nettoyer#0;class#VueAjouterPrix#0" />
-            <element signature="method#demanderPrix#0;class#VueAjouterPrix#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/vue/VueAjouterSkieur.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="316">
+        <state relative-caret-position="571">
           <caret line="67" column="37" selection-start-line="67" selection-start-column="37" selection-end-line="67" selection-end-column="37" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -779,19 +746,53 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/action/Controleur.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="67" column="4" selection-start-line="67" selection-start-column="4" selection-end-line="67" selection-end-column="4" />
+        <state relative-caret-position="138">
+          <caret line="75" column="40" selection-start-line="75" selection-start-column="40" selection-end-line="75" selection-end-column="40" />
           <folding>
             <element signature="method#Controleur#0;class#Controleur#0" />
             <element signature="method#ajouterSkieur#0;class#Controleur#0" />
             <element signature="method#modifierSkieur#0;class#Controleur#0" />
             <element signature="method#naviguerVersVueModifierSkieur#0;class#Controleur#0" />
             <element signature="method#naviguerVersVueAjouterSkieur#0;class#Controleur#0" />
-            <element signature="method#naviguerVersVueAjouterPrix#0;class#Controleur#0" />
             <element signature="method#naviguerVersVueModifierPrix#0;class#Controleur#0" />
             <element signature="method#ajouterPrix#0;class#Controleur#0" />
             <element signature="method#modifierPrix#0;class#Controleur#0" />
             <element signature="method#getInstance#0;class#Controleur#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/vue/VueModifierPrix.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="89">
+          <caret line="17" column="4" selection-start-line="17" selection-start-column="4" selection-end-line="20" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/vue/VueAjouterPrix.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="232">
+          <caret line="67" column="24" selection-start-line="67" selection-start-column="24" selection-end-line="67" selection-end-column="24" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1385#1386#0" expanded="true" />
+            <element signature="e#1430#1431#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/vue/VueModifierSkieur.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="109" column="60" selection-start-line="109" selection-start-column="60" selection-end-line="109" selection-end-column="60" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#afficherGrillerModifierSkieur#0;class#VueModifierSkieur#0" />
+            <element signature="e#3966#3967#0" expanded="true" />
+            <element signature="e#4037#4038#0" expanded="true" />
           </folding>
         </state>
       </provider>

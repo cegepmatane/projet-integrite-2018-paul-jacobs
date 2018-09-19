@@ -70,9 +70,10 @@ public class Controleur {
         this.navigateurVueSkieur.naviguerVersVueAjouterSkieur();
     }
 
-    public void naviguerVersVueAjouterPrix()
+    public void naviguerVersVueAjouterPrix(Skieur skieur)
     {
         this.vueAjouterPrix.nettoyer();
+        this.vueAjouterPrix.preparerSkieur(skieur);
         this.navigateurVueSkieur.naviguerVersVueAjouterPrix();
     }
 

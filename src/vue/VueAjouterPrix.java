@@ -1,6 +1,8 @@
 package vue;
 
 import action.Controleur;
+import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
@@ -11,9 +13,11 @@ import modele.Skieur;
 
 public class VueAjouterPrix extends Scene {
 
+    private Button actionCreerPrix;
     private TextField valeurNom;
     private TextField valeurDate;
     private TextField valeurTemps;
+    private Skieur skieur;
 
     private GridPane grilleAjouterPrix;
     private Controleur controleur;
@@ -23,8 +27,8 @@ public class VueAjouterPrix extends Scene {
         grilleAjouterPrix = (GridPane) this.getRoot();
 
         this.grilleAjouterPrix.add(new Label("Nom : "), 0, 0);
-        this.grilleAjouterPrix.add(new Label("Prenom : "), 1, 0);
-        this.grilleAjouterPrix.add(new Label("Age : "), 2, 0);
+        this.grilleAjouterPrix.add(new Label("Date : "), 1, 0);
+        this.grilleAjouterPrix.add(new Label("Temps : "), 2, 0);
 
         valeurNom = new TextField("");
         valeurDate = new TextField("");
@@ -34,7 +38,15 @@ public class VueAjouterPrix extends Scene {
         this.grilleAjouterPrix.add(valeurDate,1,1);
         this.grilleAjouterPrix.add(valeurTemps,2,1);
 
-        this.grilleAjouterPrix.add(new Button("enregistrer"),0,2);
+        this.actionCreerPrix = new Button("enregistrer");
+        this.actionCreerPrix.setOnAction(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent event) {
+                demanderPrix();
+            }
+        });
+
+        this.grilleAjouterPrix.add(actionCreerPrix,0,2);
     }
 
     public void nettoyer()
@@ -44,12 +56,16 @@ public class VueAjouterPrix extends Scene {
         this.valeurTemps.setText("");
     }
 
-    private Prix demanderPrix(Skieur skieur)
+    private Prix demanderPrix()
     {
-        return new Prix(Integer.toString(skieur.getId()),valeurNom.getText(),valeurDate.getText(),valeurTemps.getText());
+        return new Prix(Integer.toString(this.skieur.getId()),valeurNom.getText(),valeurDate.getText(),valeurTemps.getText());
     }
 
     public void setControleur(Controleur controleur) {
         this.controleur = controleur;
+    }
+
+    public void preparerSkieur(Skieur skieur) {
+        this.skieur = skieur;
     }
 }

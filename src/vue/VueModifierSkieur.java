@@ -107,7 +107,7 @@ public class VueModifierSkieur extends Scene {
         actionAjouterPrix.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent event) {
-                controleur.naviguerVersVueAjouterPrix();
+                controleur.naviguerVersVueAjouterPrix(skieur);
             }
         });
 
