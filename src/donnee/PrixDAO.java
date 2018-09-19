@@ -28,14 +28,14 @@ public class PrixDAO {
         return simulerListePrix();
     }
 
-    public Prix raporterprix()
+    public Prix raporterprix(String idSkieur, String titre, String date, String temps)
     {
-        return null;
+        return new Prix(idSkieur,titre, date,temps);
     }
 
     public void modifierPrix(Skieur skieur, Prix prix)
     {
-
+        
     }
 
     public void ajouterPrix(Skieur skieur, Prix prix)
