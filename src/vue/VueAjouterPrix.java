@@ -42,7 +42,8 @@ public class VueAjouterPrix extends Scene {
         this.actionCreerPrix.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent event) {
-                demanderPrix();
+                Prix prixResultat = demanderPrix();
+                controleur.ajouterPrix(skieur, prixResultat);
             }
         });
 
