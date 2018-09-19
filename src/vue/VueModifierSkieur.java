@@ -68,23 +68,22 @@ public class VueModifierSkieur extends Scene {
         this.grilleModifierSkieur.add(valeurAge,1,2);
         this.grilleModifierSkieur.add(valeurPoids,1,3);
         this.grilleAffichage.add(grilleModifierSkieur,0,0);
-        afficherGrillePrix(skieur);
         this.grilleAffichage.add(actionModifierSkieur,0,5);
 
     }
 
-    private void afficherGrillePrix(Skieur skieur)
+    public void afficherGrillePrix(Skieur skieur, List<Prix> listePrix)
     {
-        List<Prix> listePrix = new ArrayList<>();
+        //List<Prix> listePrix = new ArrayList<>();
         grilleAffichagePrix.add(new Label("nom"),0,0);
         grilleAffichagePrix.add(new Label("date"),1,0);
         grilleAffichagePrix.add(new Label("temps"),2,0);
-        grilleAffichagePrix.add(new Label("place"),3,0);
 
-        listePrix.add(new Prix("0", "trophee", "00-00-0000", "1s","1er"));
-        listePrix.add(new Prix("1", "tropheee", "00-00-0000", "1s","1er"));
-        listePrix.add(new Prix("2", "tropheee", "00-00-0000", "1s","1er"));
-
+        /*
+        listePrix.add(new Prix("0", "1", "trophee", "00-00-0000","1s"));
+        listePrix.add(new Prix("1", "1", "trophee", "00-00-0000","1s"));
+        listePrix.add(new Prix("2", "1", "trophee", "00-00-0000","1s"));
+*/
         int numero = 0;
         for(Prix prix : listePrix)
         {
@@ -100,9 +99,8 @@ public class VueModifierSkieur extends Scene {
             grilleAffichagePrix.add(new Label(prix.getNomPrix()), 0,numero);
             grilleAffichagePrix.add(new Label(prix.getDatePrix()), 1,numero);
             grilleAffichagePrix.add(new Label(prix.getTemps()), 2,numero);
-            grilleAffichagePrix.add(new Label(prix.getPlace()), 3,numero);
-            this.grilleAffichagePrix.add(actionModifierPrix, 4, numero);
-            grilleAffichagePrix.add(new Button("supprimer"), 5, numero);
+            this.grilleAffichagePrix.add(actionModifierPrix, 3, numero);
+            grilleAffichagePrix.add(new Button("supprimer"), 4, numero);
         }
 
         Button actionAjouterPrix = new Button("ajouter");
