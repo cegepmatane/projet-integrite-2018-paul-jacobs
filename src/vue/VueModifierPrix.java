@@ -31,7 +31,7 @@ public class VueModifierPrix extends Scene {
         this.actionModifierPrix.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent event) {
-                Prix prix = recupererPrix();
+                Prix prix = demanderPrix();
                 controleur.modifierPrix(skieur,prix);
             }
         });
@@ -40,6 +40,7 @@ public class VueModifierPrix extends Scene {
     public void afficherVueModifierPrix(Prix prix, Skieur skieur)
     {
         VueModifierPrix.skieur = skieur;
+        this.grilleModifierPrix.getChildren().clear();
         this.grilleModifierPrix.add(new Label("Nom : "), 0, 0);
         this.grilleModifierPrix.add(new Label("Prenom : "), 1, 0);
         this.grilleModifierPrix.add(new Label("Age : "), 2, 0);
@@ -61,9 +62,8 @@ public class VueModifierPrix extends Scene {
         this.controleur = controleur;
     }
 
-    private Prix recupererPrix()
+    private Prix demanderPrix()
     {
-
         return new Prix(Integer.toString(skieur.getId()),valeurNom.getText(),valeurDate.getText(),valeurTemps.getText());
     }
 

@@ -40,7 +40,7 @@ public class VueModifierSkieur extends Scene {
         this.actionModifierSkieur.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent event) {
-                Skieur skieur = recupererSkieur();
+                Skieur skieur = demanderSkieur();
                 controleur.modifierSkieur(skieur);
             }
         });
@@ -116,7 +116,7 @@ public class VueModifierSkieur extends Scene {
         this.grilleAffichage.add(grilleAffichagePrix,0,4);
     }
 
-    private Skieur recupererSkieur(){
+    private Skieur demanderSkieur(){
         Skieur skieur = new Skieur(
                 this.valeurNom.getText(),
                 this.valeurPrenom.getText(),
