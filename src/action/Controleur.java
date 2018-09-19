@@ -66,10 +66,15 @@ public class Controleur {
 
     public void naviguerVersVueAjouterSkieur()
     {
+        vueAjouterSkieur.nettoyer();
         this.navigateurVueSkieur.naviguerVersVueAjouterSkieur();
     }
 
-    public void naviguerVersVueAjouterPrix() { this.navigateurVueSkieur.naviguerVersVueAjouterPrix(); }
+    public void naviguerVersVueAjouterPrix()
+    {
+        this.vueAjouterPrix.nettoyer();
+        this.navigateurVueSkieur.naviguerVersVueAjouterPrix();
+    }
 
     public void naviguerVersVueModifierPrix(Prix prix, Skieur skieur)
     {

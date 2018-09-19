@@ -2,11 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="60493160-4179-4819-b97e-6f7ec32bb33b" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/action/Controleur.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/action/Controleur.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/vue/VueAjouterPrix.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/vue/VueAjouterPrix.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/vue/VueModifierPrix.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/vue/VueModifierPrix.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/vue/VueModifierSkieur.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/vue/VueModifierSkieur.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/vue/VueAjouterSkieur.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/vue/VueAjouterSkieur.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -94,7 +91,7 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="java" value="29" />
+          <entry key="java" value="30" />
           <entry key="skieur" value="2" />
           <entry key="sql" value="2" />
         </counts>
@@ -102,7 +99,7 @@
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="Database Element" value="2" />
-          <entry key="JAVA" value="29" />
+          <entry key="JAVA" value="30" />
           <entry key="SQL" value="1" />
           <entry key="Scratch" value="1" />
         </counts>
@@ -110,13 +107,13 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="dummy" value="4" />
-          <entry key="java" value="6715" />
+          <entry key="java" value="6781" />
           <entry key="txt" value="9" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="6714" />
+          <entry key="JAVA" value="6780" />
           <entry key="PLAIN_TEXT" value="13" />
           <entry key="SQL" value="1" />
         </counts>
@@ -138,6 +135,20 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/vue/VueAjouterSkieur.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="316">
+              <caret line="67" column="37" selection-start-line="67" selection-start-column="37" selection-end-line="67" selection-end-column="37" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#2051#2052#0" expanded="true" />
+                <element signature="e#2088#2089#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/vue/VueListeSkieur.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="157">
@@ -149,13 +160,22 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/action/Controleur.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="361">
-              <caret line="90" column="88" selection-start-line="90" selection-start-column="88" selection-end-line="90" selection-end-column="88" />
+            <state relative-caret-position="408">
+              <caret line="67" column="4" selection-start-line="67" selection-start-column="4" selection-end-line="67" selection-end-column="4" />
               <folding>
-                <element signature="imports" expanded="true" />
+                <element signature="method#Controleur#0;class#Controleur#0" />
+                <element signature="method#ajouterSkieur#0;class#Controleur#0" />
+                <element signature="method#modifierSkieur#0;class#Controleur#0" />
+                <element signature="method#naviguerVersVueModifierSkieur#0;class#Controleur#0" />
+                <element signature="method#naviguerVersVueAjouterSkieur#0;class#Controleur#0" />
+                <element signature="method#naviguerVersVueAjouterPrix#0;class#Controleur#0" />
+                <element signature="method#naviguerVersVueModifierPrix#0;class#Controleur#0" />
+                <element signature="method#ajouterPrix#0;class#Controleur#0" />
+                <element signature="method#modifierPrix#0;class#Controleur#0" />
+                <element signature="method#getInstance#0;class#Controleur#0" />
               </folding>
             </state>
           </provider>
@@ -187,11 +207,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/vue/VueAjouterPrix.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="261">
-              <caret line="36" column="8" selection-start-line="36" selection-start-column="8" selection-end-line="36" selection-end-column="66" />
+            <state relative-caret-position="210">
+              <caret line="36" column="46" lean-forward="true" selection-start-line="36" selection-start-column="46" selection-end-line="36" selection-end-column="46" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="method#nettoyer#0;class#VueAjouterPrix#0" />
@@ -265,7 +285,6 @@
         <option value="$PROJECT_DIR$/src/vue/ModifierSkieur.java" />
         <option value="$PROJECT_DIR$/src/vue/VueListeSkieur.java" />
         <option value="$PROJECT_DIR$/src/modele/Skieur.java" />
-        <option value="$PROJECT_DIR$/src/vue/VueAjouterSkieur.java" />
         <option value="$PROJECT_DIR$/src/modele/prix.java" />
         <option value="$PROJECT_DIR$/src/donnee/prixDAO.java" />
         <option value="$PROJECT_DIR$/src/donnee/SkieurDAO.java" />
@@ -273,10 +292,11 @@
         <option value="$PROJECT_DIR$/src/modele/Prix.java" />
         <option value="$PROJECT_DIR$/src/vue/NavigateurVueSkieur.java" />
         <option value="$PROJECT_DIR$/src/donnee/PrixDAO.java" />
-        <option value="$PROJECT_DIR$/src/action/Controleur.java" />
         <option value="$PROJECT_DIR$/src/vue/VueModifierPrix.java" />
         <option value="$PROJECT_DIR$/src/vue/VueModifierSkieur.java" />
         <option value="$PROJECT_DIR$/src/vue/VueAjouterPrix.java" />
+        <option value="$PROJECT_DIR$/src/vue/VueAjouterSkieur.java" />
+        <option value="$PROJECT_DIR$/src/action/Controleur.java" />
       </list>
     </option>
   </component>
@@ -554,12 +574,12 @@
       <workItem from="1537220639463" duration="8684000" />
       <workItem from="1537307571727" duration="145000" />
       <workItem from="1537307849935" duration="2154000" />
-      <workItem from="1537324087118" duration="933000" />
+      <workItem from="1537324087118" duration="1307000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="63034000" />
+    <option name="totallyTimeSpent" value="63408000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="754" extended-state="6" />
@@ -691,36 +711,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/vue/VueListeSkieur.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="157">
-          <caret line="33" column="47" lean-forward="true" selection-start-line="33" selection-start-column="47" selection-end-line="33" selection-end-column="47" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/action/Controleur.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="361">
-          <caret line="90" column="88" selection-start-line="90" selection-start-column="88" selection-end-line="90" selection-end-column="88" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/vue/VueAjouterSkieur.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="276">
-          <caret line="65" column="6" selection-start-line="63" selection-start-column="4" selection-end-line="65" selection-end-column="6" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/vue/NavigateurVueSkieur.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="174">
@@ -755,12 +745,53 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/vue/VueAjouterPrix.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="261">
-          <caret line="36" column="8" selection-start-line="36" selection-start-column="8" selection-end-line="36" selection-end-column="66" />
+        <state relative-caret-position="210">
+          <caret line="36" column="46" lean-forward="true" selection-start-line="36" selection-start-column="46" selection-end-line="36" selection-end-column="46" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="method#nettoyer#0;class#VueAjouterPrix#0" />
             <element signature="method#demanderPrix#0;class#VueAjouterPrix#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/vue/VueAjouterSkieur.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="316">
+          <caret line="67" column="37" selection-start-line="67" selection-start-column="37" selection-end-line="67" selection-end-column="37" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#2051#2052#0" expanded="true" />
+            <element signature="e#2088#2089#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/vue/VueListeSkieur.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="157">
+          <caret line="33" column="47" lean-forward="true" selection-start-line="33" selection-start-column="47" selection-end-line="33" selection-end-column="47" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/action/Controleur.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="67" column="4" selection-start-line="67" selection-start-column="4" selection-end-line="67" selection-end-column="4" />
+          <folding>
+            <element signature="method#Controleur#0;class#Controleur#0" />
+            <element signature="method#ajouterSkieur#0;class#Controleur#0" />
+            <element signature="method#modifierSkieur#0;class#Controleur#0" />
+            <element signature="method#naviguerVersVueModifierSkieur#0;class#Controleur#0" />
+            <element signature="method#naviguerVersVueAjouterSkieur#0;class#Controleur#0" />
+            <element signature="method#naviguerVersVueAjouterPrix#0;class#Controleur#0" />
+            <element signature="method#naviguerVersVueModifierPrix#0;class#Controleur#0" />
+            <element signature="method#ajouterPrix#0;class#Controleur#0" />
+            <element signature="method#modifierPrix#0;class#Controleur#0" />
+            <element signature="method#getInstance#0;class#Controleur#0" />
           </folding>
         </state>
       </provider>

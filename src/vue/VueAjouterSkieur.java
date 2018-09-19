@@ -60,6 +60,14 @@ public class VueAjouterSkieur extends Scene{
 		return new Skieur(valeurNom.getText(),valeurPrenom.getText(),valeurAge.getText(),valeurPoids.getText());
 	}
 
+	public void nettoyer()
+	{
+		this.valeurNom.setText("");
+		this.valeurPrenom.setText("");
+		this.valeurAge.setText("");
+		this.valeurPoids.setText("");
+	}
+
 
 	 public void setControleur(Controleur controleur) {
 		 this.controleur = controleur;
