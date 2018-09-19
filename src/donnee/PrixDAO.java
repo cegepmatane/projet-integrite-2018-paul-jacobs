@@ -9,10 +9,6 @@ import java.util.List;
 
 public class PrixDAO {
 
-    private String BASEDEDONNEES_DRIVER = "org.postgresql.Driver";
-    private String BASEDEDONNEES_URL = "jdbc:postgresql://localhost:5432/skieur";
-    private String BASEDEDONNEES_USAGER = "postgres";
-    private String BASEDEDONNEES_MOTDEPASSE = "toto";
     Connection connection=null;
 
     public PrixDAO() {
@@ -21,10 +17,10 @@ public class PrixDAO {
 
     private List<Prix> simulerListePrix(){
         List<Prix> listePrix = new ArrayList<>();
-        listePrix.add(new Prix("1","prix 1", "00-00-0000"));
-        listePrix.add(new Prix("1","prix 1", "00-00-0000"));
-        listePrix.add(new Prix("1","prix 1", "00-00-0000"));
-        listePrix.add(new Prix("1","prix 1", "00-00-0000"));
+        listePrix.add(new Prix("1","prix 1", "00-00-0000","1s"));
+        listePrix.add(new Prix("1","prix 1", "00-00-0000","1s"));
+        listePrix.add(new Prix("1","prix 1", "00-00-0000","1s"));
+        listePrix.add(new Prix("1","prix 1", "00-00-0000","1s"));
         return listePrix;
     }
 

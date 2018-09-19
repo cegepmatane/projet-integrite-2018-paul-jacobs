@@ -3,40 +3,35 @@ package modele;
 public class Prix {
 
     private String idPrix;
+    private String idSkieur;
     private String nomPrix;
     private String datePrix;
     private String temps;
-    private String place;
 
     public Prix(String idPrix) {
         this.idPrix = idPrix;
     }
 
-    public Prix(String idPrix, String nomPrix) {
+    public Prix(String idPrix, String idSkieur) {
         this.idPrix = idPrix;
         this.nomPrix = nomPrix;
     }
 
-    public Prix(String idPrix, String nomPrix, String datePrix) {
-        this.idPrix = idPrix;
-        this.nomPrix = nomPrix;
-        this.datePrix = datePrix;
-    }
-
-    public Prix(String idPrix, String nomPrix, String datePrix, String temps) {
-        this.idPrix = idPrix;
+    public Prix(String idSkieur, String nomPrix, String datePrix, String temps) {
+        this.idSkieur = idSkieur;
         this.nomPrix = nomPrix;
         this.datePrix = datePrix;
         this.temps = temps;
     }
 
-    public Prix(String idPrix, String nomPrix, String datePrix, String temps, String place) {
+    public Prix(String idPrix, String idSkieur, String nomPrix, String datePrix, String temps) {
         this.idPrix = idPrix;
+        this.idSkieur = idSkieur;
         this.nomPrix = nomPrix;
         this.datePrix = datePrix;
         this.temps = temps;
-        this.place = place;
     }
+
 
     public String getIdPrix() {
         return idPrix;
@@ -70,11 +65,11 @@ public class Prix {
         this.temps = temps;
     }
 
-    public String getPlace() {
-        return place;
+    public String getIdSkieur() {
+        return idSkieur;
     }
 
-    public void setPlace(String place) {
-        this.place = place;
+    public void setIdSkieur(String idSkieur) {
+        this.idSkieur = idSkieur;
     }
 }

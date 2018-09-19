@@ -1,5 +1,6 @@
 package vue;
 
+import action.Controleur;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
@@ -11,9 +12,9 @@ public class VueAjouterPrix extends Scene {
     private TextField valeurNom;
     private TextField valeurDate;
     private TextField valeurTemps;
-    private TextField valeurPlace;
 
     private GridPane grilleAjouterPrix;
+    private Controleur controleur;
 
     public VueAjouterPrix() {
         super(new GridPane(),400,400);
@@ -22,18 +23,19 @@ public class VueAjouterPrix extends Scene {
         this.grilleAjouterPrix.add(new Label("Nom : "), 0, 0);
         this.grilleAjouterPrix.add(new Label("Prenom : "), 1, 0);
         this.grilleAjouterPrix.add(new Label("Age : "), 2, 0);
-        this.grilleAjouterPrix.add(new Label("Place : "), 3, 0);
 
         valeurNom = new TextField("");
         valeurDate = new TextField("");
         valeurTemps = new TextField("");
-        valeurPlace = new TextField("");
 
         this.grilleAjouterPrix.add(valeurNom,0,1);
         this.grilleAjouterPrix.add(valeurDate,1,1);
         this.grilleAjouterPrix.add(valeurTemps,2,1);
-        this.grilleAjouterPrix.add(valeurPlace ,3,1);
 
         this.grilleAjouterPrix.add(new Button("enregistrer"),0,2);
+    }
+
+    public void setControleur(Controleur controleur) {
+        this.controleur = controleur;
     }
 }
