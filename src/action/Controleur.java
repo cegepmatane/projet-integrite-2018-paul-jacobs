@@ -85,7 +85,7 @@ public class Controleur {
 
     public void ajouterPrix(Skieur skieur, Prix prix)
     {
-        this.prixDAO.ajouterPrix(skieur, prix);
+        this.prixDAO.ajouterPrix(prix);
         this.vueModifierSkieur.afficherGrillerModifierSkieur(skieur);
         this.vueModifierSkieur.afficherGrillePrix(skieur, prixDAO.listerPrixParPatente(skieur));
         this.navigateurVueSkieur.naviguerVersVueModifierSkieur();
