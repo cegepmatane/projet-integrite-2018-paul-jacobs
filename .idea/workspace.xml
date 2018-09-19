@@ -2,8 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="60493160-4179-4819-b97e-6f7ec32bb33b" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/action/Controleur.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/action/Controleur.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/vue/VueAjouterPrix.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/vue/VueAjouterPrix.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/donnee/PrixDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/donnee/PrixDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/donnee/SkieurDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/donnee/SkieurDAO.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -91,7 +92,7 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="java" value="31" />
+          <entry key="java" value="32" />
           <entry key="skieur" value="2" />
           <entry key="sql" value="2" />
         </counts>
@@ -99,7 +100,7 @@
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="Database Element" value="2" />
-          <entry key="JAVA" value="31" />
+          <entry key="JAVA" value="32" />
           <entry key="SQL" value="1" />
           <entry key="Scratch" value="1" />
         </counts>
@@ -107,13 +108,13 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="dummy" value="4" />
-          <entry key="java" value="7022" />
+          <entry key="java" value="7096" />
           <entry key="txt" value="9" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="7021" />
+          <entry key="JAVA" value="7095" />
           <entry key="PLAIN_TEXT" value="13" />
           <entry key="SQL" value="1" />
         </counts>
@@ -175,11 +176,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/action/Controleur.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="307">
-              <caret line="90" column="65" selection-start-line="90" selection-start-column="65" selection-end-line="90" selection-end-column="65" />
+            <state relative-caret-position="134">
+              <caret line="86" column="5" selection-start-line="86" selection-start-column="5" selection-end-line="86" selection-end-column="5" />
               <folding>
                 <element signature="method#Controleur#0;class#Controleur#0" />
                 <element signature="method#ajouterSkieur#0;class#Controleur#0" />
@@ -187,7 +188,6 @@
                 <element signature="method#naviguerVersVueModifierSkieur#0;class#Controleur#0" />
                 <element signature="method#naviguerVersVueAjouterSkieur#0;class#Controleur#0" />
                 <element signature="method#naviguerVersVueModifierPrix#0;class#Controleur#0" />
-                <element signature="method#modifierPrix#0;class#Controleur#0" />
                 <element signature="method#getInstance#0;class#Controleur#0" />
               </folding>
             </state>
@@ -221,17 +221,25 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/donnee/PrixDAO.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="207">
-              <caret line="25" selection-start-line="25" selection-end-line="25" />
+            <state relative-caret-position="4">
+              <caret line="27" column="15" selection-start-line="27" selection-start-column="15" selection-end-line="27" selection-end-column="15" />
+              <folding>
+                <element signature="e#745#746#0" expanded="true" />
+                <element signature="e#786#787#0" expanded="true" />
+                <element signature="e#913#914#0" expanded="true" />
+                <element signature="e#955#956#0" expanded="true" />
+                <element signature="e#1042#1043#0" expanded="true" />
+                <element signature="e#1110#1111#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/donnee/BaseDeDonnees.java">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/donnee/SkieurDAO.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="9" column="79" selection-start-line="9" selection-start-column="79" selection-end-line="9" selection-end-column="79" />
+            <state relative-caret-position="309">
+              <caret line="53" column="36" selection-start-line="53" selection-start-column="36" selection-end-line="53" selection-end-column="36" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -284,16 +292,16 @@
         <option value="$PROJECT_DIR$/src/modele/Skieur.java" />
         <option value="$PROJECT_DIR$/src/modele/prix.java" />
         <option value="$PROJECT_DIR$/src/donnee/prixDAO.java" />
-        <option value="$PROJECT_DIR$/src/donnee/SkieurDAO.java" />
         <option value="$PROJECT_DIR$/src/donnee/BaseDeDonnees.java" />
         <option value="$PROJECT_DIR$/src/modele/Prix.java" />
         <option value="$PROJECT_DIR$/src/vue/NavigateurVueSkieur.java" />
-        <option value="$PROJECT_DIR$/src/donnee/PrixDAO.java" />
         <option value="$PROJECT_DIR$/src/vue/VueModifierPrix.java" />
         <option value="$PROJECT_DIR$/src/vue/VueAjouterSkieur.java" />
         <option value="$PROJECT_DIR$/src/vue/VueModifierSkieur.java" />
         <option value="$PROJECT_DIR$/src/vue/VueAjouterPrix.java" />
         <option value="$PROJECT_DIR$/src/action/Controleur.java" />
+        <option value="$PROJECT_DIR$/src/donnee/PrixDAO.java" />
+        <option value="$PROJECT_DIR$/src/donnee/SkieurDAO.java" />
       </list>
     </option>
   </component>
@@ -492,7 +500,7 @@
     <property name="DatabaseDriversLRU" value="postgresql" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1537326185653" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1537326473948" />
     <property name="database.console.LAST_STATE" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/lib/postgresql-42.1.4.jar!/" />
     <property name="project.structure.last.edited" value="Libraries" />
@@ -571,18 +579,18 @@
       <workItem from="1537220639463" duration="8684000" />
       <workItem from="1537307571727" duration="145000" />
       <workItem from="1537307849935" duration="2154000" />
-      <workItem from="1537324087118" duration="2086000" />
+      <workItem from="1537324087118" duration="2385000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="64187000" />
+    <option name="totallyTimeSpent" value="64486000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="754" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.19742814" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.19742814" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -592,7 +600,7 @@
       <window_info id="Favorites" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.4977307" visible="true" weight="0.28548387" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4977307" visible="true" weight="0.28548387" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -668,18 +676,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/donnee/SkieurDAO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="207">
-          <caret line="26" column="40" lean-forward="true" selection-start-line="26" selection-start-column="40" selection-end-line="26" selection-end-column="40" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#449#450#0" expanded="true" />
-            <element signature="e#526#527#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/donnee/BaseDeDonnees.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
@@ -723,16 +719,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/vue/VueModifierPrix.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="89">
-          <caret line="17" column="4" selection-start-line="17" selection-start-column="4" selection-end-line="20" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/vue/VueModifierSkieur.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
@@ -756,10 +742,29 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/donnee/PrixDAO.java">
+    <entry file="file://$PROJECT_DIR$/src/action/Controleur.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="207">
-          <caret line="25" selection-start-line="25" selection-end-line="25" />
+        <state relative-caret-position="134">
+          <caret line="86" column="5" selection-start-line="86" selection-start-column="5" selection-end-line="86" selection-end-column="5" />
+          <folding>
+            <element signature="method#Controleur#0;class#Controleur#0" />
+            <element signature="method#ajouterSkieur#0;class#Controleur#0" />
+            <element signature="method#modifierSkieur#0;class#Controleur#0" />
+            <element signature="method#naviguerVersVueModifierSkieur#0;class#Controleur#0" />
+            <element signature="method#naviguerVersVueAjouterSkieur#0;class#Controleur#0" />
+            <element signature="method#naviguerVersVueModifierPrix#0;class#Controleur#0" />
+            <element signature="method#getInstance#0;class#Controleur#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/vue/VueModifierPrix.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="89">
+          <caret line="17" column="4" selection-start-line="17" selection-start-column="4" selection-end-line="20" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -773,19 +778,27 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/action/Controleur.java">
+    <entry file="file://$PROJECT_DIR$/src/donnee/PrixDAO.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="307">
-          <caret line="90" column="65" selection-start-line="90" selection-start-column="65" selection-end-line="90" selection-end-column="65" />
+        <state relative-caret-position="4">
+          <caret line="27" column="15" selection-start-line="27" selection-start-column="15" selection-end-line="27" selection-end-column="15" />
           <folding>
-            <element signature="method#Controleur#0;class#Controleur#0" />
-            <element signature="method#ajouterSkieur#0;class#Controleur#0" />
-            <element signature="method#modifierSkieur#0;class#Controleur#0" />
-            <element signature="method#naviguerVersVueModifierSkieur#0;class#Controleur#0" />
-            <element signature="method#naviguerVersVueAjouterSkieur#0;class#Controleur#0" />
-            <element signature="method#naviguerVersVueModifierPrix#0;class#Controleur#0" />
-            <element signature="method#modifierPrix#0;class#Controleur#0" />
-            <element signature="method#getInstance#0;class#Controleur#0" />
+            <element signature="e#745#746#0" expanded="true" />
+            <element signature="e#786#787#0" expanded="true" />
+            <element signature="e#913#914#0" expanded="true" />
+            <element signature="e#955#956#0" expanded="true" />
+            <element signature="e#1042#1043#0" expanded="true" />
+            <element signature="e#1110#1111#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/donnee/SkieurDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="309">
+          <caret line="53" column="36" selection-start-line="53" selection-start-column="36" selection-end-line="53" selection-end-column="36" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>

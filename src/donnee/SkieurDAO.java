@@ -41,7 +41,7 @@ public class SkieurDAO {
                  String age = curseurListeSkieurs.getString("age");
                  String poids = curseurListeSkieurs.getString("poids");
 
-                 listeSkieur.add(new Skieur(id,nom,prenom,age,poids));
+                 listeSkieur.add(raporterSkieur(id,nom,prenom,age,poids));
 
              }
         } catch (SQLException e) {
@@ -51,9 +51,9 @@ public class SkieurDAO {
         return listeSkieur;
     }
 
-    public void raporterSkieur()
+    public Skieur raporterSkieur(int id, String nom, String prenom, String age, String poids)
     {
-
+        return new Skieur(id,nom,prenom,age,poids);
     }
 
     public void ajouterSkieur(Skieur skieur)
