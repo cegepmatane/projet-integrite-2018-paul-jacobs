@@ -45,7 +45,7 @@ public class VueModifierPrix extends Scene {
         this.grilleModifierPrix.add(new Label("Prenom : "), 1, 0);
         this.grilleModifierPrix.add(new Label("Age : "), 2, 0);
 
-        valeurNom = new TextField(prix.getNomPrix());
+        valeurNom = new TextField(prix.getTitre());
         valeurDate = new TextField(prix.getDatePrix());
         valeurTemps = new TextField(prix.getTemps());
 

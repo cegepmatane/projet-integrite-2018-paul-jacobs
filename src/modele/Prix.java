@@ -4,7 +4,7 @@ public class Prix {
 
     private String idPrix;
     private String idSkieur;
-    private String nomPrix;
+    private String titre;
     private String datePrix;
     private String temps;
 
@@ -14,20 +14,20 @@ public class Prix {
 
     public Prix(String idPrix, String idSkieur) {
         this.idPrix = idPrix;
-        this.nomPrix = nomPrix;
+        this.titre = titre;
     }
 
-    public Prix(String idSkieur, String nomPrix, String datePrix, String temps) {
+    public Prix(String idSkieur, String titre, String datePrix, String temps) {
         this.idSkieur = idSkieur;
-        this.nomPrix = nomPrix;
+        this.titre = titre;
         this.datePrix = datePrix;
         this.temps = temps;
     }
 
-    public Prix(String idPrix, String idSkieur, String nomPrix, String datePrix, String temps) {
+    public Prix(String idPrix, String idSkieur, String titre, String datePrix, String temps) {
         this.idPrix = idPrix;
         this.idSkieur = idSkieur;
-        this.nomPrix = nomPrix;
+        this.titre = titre;
         this.datePrix = datePrix;
         this.temps = temps;
     }
@@ -41,12 +41,12 @@ public class Prix {
         this.idPrix = idPrix;
     }
 
-    public String getNomPrix() {
-        return nomPrix;
+    public String getTitre() {
+        return titre;
     }
 
-    public void setNomPrix(String nomPrix) {
-        this.nomPrix = nomPrix;
+    public void setTitre(String titre) {
+        this.titre = titre;
     }
 
     public String getDatePrix() {
