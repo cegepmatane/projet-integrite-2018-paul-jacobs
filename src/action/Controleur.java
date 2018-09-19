@@ -60,6 +60,7 @@ public class Controleur {
     public void naviguerVersVueModifierSkieur(Skieur skieur)
     {
         vueModifierSkieur.afficherGrillerModifierSkieur(skieur);
+        vueModifierSkieur.afficherGrillePrix(skieur, prixDAO.listerPrixParPatente(skieur));
         this.navigateurVueSkieur.naviguerVersVueModifierSkieur();
     }
 
