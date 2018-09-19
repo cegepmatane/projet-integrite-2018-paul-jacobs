@@ -87,8 +87,9 @@ public class Controleur {
     public void modifierPrix(Skieur skieur, Prix prix)
     {
         this.prixDAO.modifierPrix(skieur, prix);
-        vueListeSkieur.afficherListeSkieur(skieurDAO.listerSkieur());
-        this.navigateurVueSkieur.naviguerVersVueListeSkieur();
+        vueModifierSkieur.afficherGrillerModifierSkieur(skieur);
+        vueModifierSkieur.afficherGrillePrix(skieur, prixDAO.listerPrixParPatente(skieur));
+        this.navigateurVueSkieur.naviguerVersVueModifierSkieur();
     }
 
     //debut singleton
