@@ -6,6 +6,8 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.GridPane;
+import modele.Prix;
+import modele.Skieur;
 
 public class VueAjouterPrix extends Scene {
 
@@ -33,6 +35,18 @@ public class VueAjouterPrix extends Scene {
         this.grilleAjouterPrix.add(valeurTemps,2,1);
 
         this.grilleAjouterPrix.add(new Button("enregistrer"),0,2);
+    }
+
+    public void nettoyer()
+    {
+        this.valeurNom.setText("");
+        this.valeurDate.setText("");
+        this.valeurTemps.setText("");
+    }
+
+    private Prix demanderPrix(Skieur skieur)
+    {
+        return new Prix(Integer.toString(skieur.getId()),valeurNom.getText(),valeurDate.getText(),valeurTemps.getText());
     }
 
     public void setControleur(Controleur controleur) {
