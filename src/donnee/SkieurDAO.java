@@ -53,6 +53,7 @@ public class SkieurDAO {
 
     public Skieur raporterSkieur(int id, String nom, String prenom, String age, String poids)
     {
+        System.out.println(id+nom+prenom+age+poids);
         return new Skieur(id,nom,prenom,age,poids);
     }
 
@@ -94,6 +95,12 @@ public class SkieurDAO {
 
     public void supprimerSkieur(Skieur skieur)
     {
-
+        try {
+            String requeteSQLAjouterPrix = "DELETE FROM skieur WHERE id="+skieur.getId();
+            Statement requeteAjouterPrix = connection.createStatement();
+            requeteAjouterPrix.execute(requeteSQLAjouterPrix);
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
     }
 }

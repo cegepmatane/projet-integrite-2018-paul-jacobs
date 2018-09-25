@@ -51,11 +51,19 @@ import java.util.List;
                 }
             });
 
+            Button actionSupprimerSkieur = new Button("supprimer");
+			actionSupprimerSkieur.setOnAction(new EventHandler<ActionEvent>() {
+                @Override
+                public void handle(ActionEvent event) {
+                    controleur.supprimerSkieur(skieur);
+                }
+            });
+
 			numero++;
 			this.grilleSkieurs.add(new Label(skieur.getNom()), 0, numero);
 			this.grilleSkieurs.add(new Label(skieur.getPrenom()), 1, numero);
 			this.grilleSkieurs.add(actionModifierSkieur, 2, numero);
-			this.grilleSkieurs.add(new Button("supprimer"), 3, numero);
+			this.grilleSkieurs.add(actionSupprimerSkieur, 3, numero);
 		}
 
 		this.grilleSkieurs.add(this.actionCreerSkieur,0,numero+1);

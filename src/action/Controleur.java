@@ -74,6 +74,7 @@ public class Controleur {
     {
         this.vueAjouterPrix.nettoyer();
         this.vueAjouterPrix.preparerSkieur(skieur);
+        System.out.println(skieur.getId());
         this.navigateurVueSkieur.naviguerVersVueAjouterPrix();
     }
 
@@ -99,12 +100,21 @@ public class Controleur {
         this.navigateurVueSkieur.naviguerVersVueModifierSkieur();
     }
 
+    //public void
+
     //debut singleton
     public static Controleur getInstance(NavigateurVueSkieur navigateurVueSkieur){
         if (instance==null)
             instance = new Controleur(navigateurVueSkieur);
         return instance;
     }
+
+    public void supprimerSkieur(Skieur skieur) {
+        skieurDAO.supprimerSkieur(skieur);
+        vueListeSkieur.afficherListeSkieur(skieurDAO.listerSkieur());
+        this.navigateurVueSkieur.naviguerVersVueListeSkieur();
+    }
+    
 
     // fin singleton
 
