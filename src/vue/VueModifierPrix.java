@@ -10,12 +10,11 @@ import javafx.scene.control.TextField;
 import javafx.scene.layout.GridPane;
 import modele.Prix;
 import modele.Skieur;
-import sun.security.acl.GroupImpl;
 
 public class VueModifierPrix extends Scene {
 
     private Button actionModifierPrix;
-    private TextField valeurNom;
+    private TextField valeurTitre;
     private TextField valeurDate;
     private TextField valeurTemps;
     private TextField valeurid;
@@ -42,16 +41,16 @@ public class VueModifierPrix extends Scene {
     {
         VueModifierPrix.skieur = skieur;
         this.grilleModifierPrix.getChildren().clear();
-        this.grilleModifierPrix.add(new Label("Nom : "), 0, 0);
-        this.grilleModifierPrix.add(new Label("Prenom : "), 1, 0);
-        this.grilleModifierPrix.add(new Label("Age : "), 2, 0);
+        this.grilleModifierPrix.add(new Label("recompense : "), 0, 0);
+        this.grilleModifierPrix.add(new Label("date : "), 1, 0);
+        this.grilleModifierPrix.add(new Label("temps : "), 2, 0);
 
-        valeurNom = new TextField(prix.getTitre());
+        valeurTitre = new TextField(prix.getTitre());
         valeurDate = new TextField(prix.getDatePrix());
         valeurTemps = new TextField(prix.getTemps());
         valeurid = new TextField(prix.getIdPrix());
 
-        this.grilleModifierPrix.add(valeurNom,0,1);
+        this.grilleModifierPrix.add(valeurTitre,0,1);
         this.grilleModifierPrix.add(valeurDate,1,1);
         this.grilleModifierPrix.add(valeurTemps,2,1);
 
@@ -66,7 +65,7 @@ public class VueModifierPrix extends Scene {
 
     private Prix demanderPrix()
     {
-        return new Prix(valeurid.getText(),Integer.toString(skieur.getId()),valeurNom.getText(),valeurDate.getText(),valeurTemps.getText());
+        return new Prix(valeurid.getText(),Integer.toString(skieur.getId()),valeurTitre.getText(),valeurDate.getText(),valeurTemps.getText());
     }
 
 }

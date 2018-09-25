@@ -14,7 +14,7 @@ import modele.Skieur;
 public class VueAjouterPrix extends Scene {
 
     private Button actionCreerPrix;
-    private TextField valeurNom;
+    private TextField valeurTitre;
     private TextField valeurDate;
     private TextField valeurTemps;
     private Skieur skieur;
@@ -26,15 +26,15 @@ public class VueAjouterPrix extends Scene {
         super(new GridPane(),400,400);
         grilleAjouterPrix = (GridPane) this.getRoot();
 
-        this.grilleAjouterPrix.add(new Label("Nom : "), 0, 0);
+        this.grilleAjouterPrix.add(new Label("recompense : "), 0, 0);
         this.grilleAjouterPrix.add(new Label("Date : "), 1, 0);
         this.grilleAjouterPrix.add(new Label("Temps : "), 2, 0);
 
-        valeurNom = new TextField("");
+        valeurTitre = new TextField("");
         valeurDate = new TextField("");
         valeurTemps = new TextField("");
 
-        this.grilleAjouterPrix.add(valeurNom,0,1);
+        this.grilleAjouterPrix.add(valeurTitre,0,1);
         this.grilleAjouterPrix.add(valeurDate,1,1);
         this.grilleAjouterPrix.add(valeurTemps,2,1);
 
@@ -52,14 +52,14 @@ public class VueAjouterPrix extends Scene {
 
     public void nettoyer()
     {
-        this.valeurNom.setText("");
+        this.valeurTitre.setText("");
         this.valeurDate.setText("");
         this.valeurTemps.setText("");
     }
 
     private Prix demanderPrix()
     {
-        return new Prix(Integer.toString(this.skieur.getId()),valeurNom.getText(),valeurDate.getText(),valeurTemps.getText());
+        return new Prix(Integer.toString(this.skieur.getId()),valeurTitre.getText(),valeurDate.getText(),valeurTemps.getText());
     }
 
     public void setControleur(Controleur controleur) {
