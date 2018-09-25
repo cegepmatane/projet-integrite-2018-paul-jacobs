@@ -83,11 +83,7 @@ public class VueModifierSkieur extends Scene {
         grilleAffichagePrix.add(new Label("date"),1,0);
         grilleAffichagePrix.add(new Label("temps"),2,0);
 
-        /*
-        listePrix.add(new Prix("0", "1", "trophee", "00-00-0000","1s"));
-        listePrix.add(new Prix("1", "1", "trophee", "00-00-0000","1s"));
-        listePrix.add(new Prix("2", "1", "trophee", "00-00-0000","1s"));
-*/
+
         int numero = 0;
         for(Prix prix : listePrix)
         {
