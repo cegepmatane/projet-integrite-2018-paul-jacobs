@@ -95,12 +95,20 @@ public class VueModifierSkieur extends Scene {
                 }
             });
 
+            Button actionSupprimerPrix = new Button("supprimer");
+            actionSupprimerPrix.setOnAction(new EventHandler<ActionEvent>() {
+                @Override
+                public void handle(ActionEvent event) {
+                    controleur.supprimerPrix(skieur, prix);
+                }
+            });
+
             numero++;
             grilleAffichagePrix.add(new Label(prix.getTitre()), 0,numero);
             grilleAffichagePrix.add(new Label(prix.getDatePrix()), 1,numero);
             grilleAffichagePrix.add(new Label(prix.getTemps()), 2,numero);
             this.grilleAffichagePrix.add(actionModifierPrix, 3, numero);
-            grilleAffichagePrix.add(new Button("supprimer"), 4, numero);
+            grilleAffichagePrix.add(actionSupprimerPrix, 4, numero);
         }
 
         Button actionAjouterPrix = new Button("ajouter");

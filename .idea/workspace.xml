@@ -2,11 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="60493160-4179-4819-b97e-6f7ec32bb33b" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/action/Controleur.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/action/Controleur.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/donnee/PrixDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/donnee/PrixDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/donnee/SkieurDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/donnee/SkieurDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/vue/VueListeSkieur.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/vue/VueListeSkieur.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/vue/VueModifierSkieur.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/vue/VueModifierSkieur.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -96,7 +93,7 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="java" value="34" />
+          <entry key="java" value="35" />
           <entry key="skieur" value="2" />
           <entry key="sql" value="4" />
         </counts>
@@ -104,7 +101,7 @@
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="Database Element" value="2" />
-          <entry key="JAVA" value="34" />
+          <entry key="JAVA" value="35" />
           <entry key="SQL" value="3" />
           <entry key="Scratch" value="1" />
         </counts>
@@ -112,13 +109,13 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="dummy" value="4" />
-          <entry key="java" value="7931" />
+          <entry key="java" value="7959" />
           <entry key="txt" value="9" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="7929" />
+          <entry key="JAVA" value="7957" />
           <entry key="PLAIN_TEXT" value="13" />
           <entry key="SQL" value="2" />
         </counts>
@@ -142,10 +139,24 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/vue/VueModifierSkieur.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="106">
+              <caret line="97" column="62" selection-start-line="97" selection-start-column="62" selection-end-line="97" selection-end-column="62" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#3413#3414#0" expanded="true" />
+                <element signature="e#3505#3506#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/action/Controleur.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="194">
-              <caret line="116" column="4" selection-start-line="116" selection-start-column="4" selection-end-line="116" selection-end-column="4" />
+              <caret line="116" selection-start-line="116" selection-end-line="116" />
               <folding>
                 <element signature="method#Controleur#0;class#Controleur#0" />
                 <element signature="method#modifierSkieur#0;class#Controleur#0" />
@@ -153,18 +164,6 @@
                 <element signature="method#naviguerVersVueAjouterSkieur#0;class#Controleur#0" />
                 <element signature="method#ajouterPrix#0;class#Controleur#0" />
                 <element signature="method#getInstance#0;class#Controleur#0" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/vue/VueModifierPrix.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-255">
-              <caret line="11" column="21" lean-forward="true" selection-start-line="11" selection-start-column="21" selection-end-line="11" selection-end-column="21" />
-              <folding>
-                <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -249,13 +248,13 @@
         <option value="$PROJECT_DIR$/src/vue/NavigateurVueSkieur.java" />
         <option value="$PROJECT_DIR$/src/vue/VueAjouterSkieur.java" />
         <option value="$PROJECT_DIR$/src/modele/Prix.java" />
-        <option value="$PROJECT_DIR$/src/vue/VueModifierSkieur.java" />
         <option value="$PROJECT_DIR$/src/vue/VueAjouterPrix.java" />
         <option value="$PROJECT_DIR$/src/vue/VueModifierPrix.java" />
         <option value="$PROJECT_DIR$/src/vue/VueListeSkieur.java" />
         <option value="$PROJECT_DIR$/src/donnee/PrixDAO.java" />
         <option value="$PROJECT_DIR$/src/donnee/SkieurDAO.java" />
         <option value="$PROJECT_DIR$/src/action/Controleur.java" />
+        <option value="$PROJECT_DIR$/src/vue/VueModifierSkieur.java" />
       </list>
     </option>
   </component>
@@ -454,7 +453,7 @@
     <property name="DatabaseDriversLRU" value="postgresql" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1537879301761" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1537879545192" />
     <property name="database.console.LAST_STATE" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/lib/postgresql-42.1.4.jar!/" />
     <property name="project.structure.last.edited" value="Libraries" />
@@ -539,12 +538,12 @@
       <workItem from="1537452225091" duration="1798000" />
       <workItem from="1537481724529" duration="652000" />
       <workItem from="1537586134803" duration="90000" />
-      <workItem from="1537878173031" duration="1128000" />
+      <workItem from="1537878173031" duration="1367000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="77207000" />
+    <option name="totallyTimeSpent" value="77446000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="754" extended-state="6" />
@@ -560,7 +559,7 @@
       <window_info id="Favorites" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4977307" visible="true" weight="0.28548387" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.4977307" visible="true" weight="0.28548387" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -576,7 +575,7 @@
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="right" id="Capture Analysis" order="4" />
-      <window_info active="true" anchor="right" id="Database" order="5" visible="true" weight="0.32980332" />
+      <window_info anchor="right" id="Database" order="5" weight="0.32980332" />
       <window_info anchor="right" id="Theme Preview" order="6" />
       <window_info anchor="right" id="Palette&#9;" order="7" />
       <window_info anchor="right" id="Maven Projects" order="8" />
@@ -693,16 +692,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/vue/VueModifierSkieur.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="776">
-          <caret line="84" selection-start-line="84" selection-end-line="84" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/vue/VueListeSkieur.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="324">
@@ -735,7 +724,7 @@
     <entry file="file://$PROJECT_DIR$/src/action/Controleur.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="194">
-          <caret line="116" column="4" selection-start-line="116" selection-start-column="4" selection-end-line="116" selection-end-column="4" />
+          <caret line="116" selection-start-line="116" selection-end-line="116" />
           <folding>
             <element signature="method#Controleur#0;class#Controleur#0" />
             <element signature="method#modifierSkieur#0;class#Controleur#0" />
@@ -743,6 +732,18 @@
             <element signature="method#naviguerVersVueAjouterSkieur#0;class#Controleur#0" />
             <element signature="method#ajouterPrix#0;class#Controleur#0" />
             <element signature="method#getInstance#0;class#Controleur#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/vue/VueModifierSkieur.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="106">
+          <caret line="97" column="62" selection-start-line="97" selection-start-column="62" selection-end-line="97" selection-end-column="62" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#3413#3414#0" expanded="true" />
+            <element signature="e#3505#3506#0" expanded="true" />
           </folding>
         </state>
       </provider>

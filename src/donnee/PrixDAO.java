@@ -94,8 +94,14 @@ public class PrixDAO {
         }
     }
 
-    public void effacerPrix(Prix prix)
+    public void supprimerPrix(Prix prix)
     {
-
+        try {
+            String requeteSQLAjouterPrix = "DELETE FROM prix WHERE id="+prix.getIdPrix();
+            Statement requeteAjouterPrix = connection.createStatement();
+            requeteAjouterPrix.execute(requeteSQLAjouterPrix);
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
     }
 }

@@ -114,7 +114,14 @@ public class Controleur {
         vueListeSkieur.afficherListeSkieur(skieurDAO.listerSkieur());
         this.navigateurVueSkieur.naviguerVersVueListeSkieur();
     }
-    
+
+    public void supprimerPrix(Skieur skieur, Prix prix)
+    {
+        prixDAO.supprimerPrix(prix);
+        vueModifierSkieur.afficherGrillerModifierSkieur(skieur);
+        vueModifierSkieur.afficherGrillePrix(skieur, prixDAO.listerPrixParPatente(skieur));
+        this.navigateurVueSkieur.naviguerVersVueModifierSkieur();
+    }
 
     // fin singleton
 
