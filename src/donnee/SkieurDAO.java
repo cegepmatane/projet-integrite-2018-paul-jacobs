@@ -39,7 +39,7 @@ public class SkieurDAO implements SkieurSQL{
                  String nom = curseurListeSkieurs.getString("nom");
                  String prenom = curseurListeSkieurs.getString("prenom");
                  String age = curseurListeSkieurs.getString("age");
-                 String poids = curseurListeSkieurs.getString("poids");
+                 String poids = Integer.toString(curseurListeSkieurs.getInt("poids"));
 
                  listeSkieur.add(new Skieur(id,nom,prenom,age,poids));
 
@@ -64,7 +64,7 @@ public class SkieurDAO implements SkieurSQL{
             String nomSkieur = resultatRequete.getString("nom");
             String prenomSkieur = resultatRequete.getString("prenom");
             String ageSkieur = resultatRequete.getString("age");
-            String poidsSkieur = resultatRequete.getString("poids");
+            String poidsSkieur = Integer.toString(resultatRequete.getInt("poids"));
             Skieur skieur = new Skieur(idSkieur,nomSkieur,prenomSkieur,ageSkieur,poidsSkieur);
             return skieur;
         }catch (SQLException e){
@@ -82,7 +82,7 @@ public class SkieurDAO implements SkieurSQL{
             requeteAjouterSkieur.setString(1, skieur.getNom());
             requeteAjouterSkieur.setString(2, skieur.getPrenom());
             requeteAjouterSkieur.setString(3, skieur.getAge());
-            requeteAjouterSkieur.setString(4, skieur.getPoids());
+            requeteAjouterSkieur.setInt(4, Integer.parseInt(skieur.getPoids()));
             requeteAjouterSkieur.execute();
 
 
@@ -97,7 +97,7 @@ public class SkieurDAO implements SkieurSQL{
             requeteModifierSkieur.setString(1, skieur.getNom());
             requeteModifierSkieur.setString(2, skieur.getPrenom());
             requeteModifierSkieur.setString(3, skieur.getAge());
-            requeteModifierSkieur.setString(4, skieur.getPoids());
+            requeteModifierSkieur.setInt(4, Integer.parseInt(skieur.getPoids()));
             requeteModifierSkieur.setInt(5, skieur.getId());
             requeteModifierSkieur.execute();
 
