@@ -6,7 +6,7 @@ import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 
-public class SkieurDAO {
+public class SkieurDAO implements SkieurSQL{
 
     Connection connection=null;
 
@@ -32,7 +32,7 @@ public class SkieurDAO {
         Statement requeteListeSkieurs = null;
         try {
             requeteListeSkieurs = connection.createStatement();
-            ResultSet curseurListeSkieurs = requeteListeSkieurs.executeQuery("SELECT * FROM skieur");
+            ResultSet curseurListeSkieurs = requeteListeSkieurs.executeQuery(SQL_LISTER_SKIEUR);
              while (curseurListeSkieurs.next())
              {
                  int id = curseurListeSkieurs.getInt("id");
@@ -41,7 +41,7 @@ public class SkieurDAO {
                  String age = curseurListeSkieurs.getString("age");
                  String poids = curseurListeSkieurs.getString("poids");
 
-                 listeSkieur.add(raporterSkieur(id,nom,prenom,age,poids));
+                 listeSkieur.add(new Skieur(id,nom,prenom,age,poids));
 
              }
         } catch (SQLException e) {
@@ -53,21 +53,37 @@ public class SkieurDAO {
 
     public Skieur raporterSkieur(int id, String nom, String prenom, String age, String poids)
     {
-        System.out.println(id+nom+prenom+age+poids);
-        return new Skieur(id,nom,prenom,age,poids);
+        try{
+            PreparedStatement requeteSkieur = connection.prepareStatement(SQL_RAPPORTER_SKIEUR);
+            requeteSkieur.setString(1,Integer.toString(id));
+
+            ResultSet resultatRequete = requeteSkieur.executeQuery();
+            resultatRequete.next();
+
+            int idSkieur = resultatRequete.getInt("id");
+            String nomSkieur = resultatRequete.getString("nom");
+            String prenomSkieur = resultatRequete.getString("prenom");
+            String ageSkieur = resultatRequete.getString("age");
+            String poidsSkieur = resultatRequete.getString("poids");
+            Skieur skieur = new Skieur(idSkieur,nomSkieur,prenomSkieur,ageSkieur,poidsSkieur);
+            return skieur;
+        }catch (SQLException e){
+            e.printStackTrace();
+        }
+        return null;
     }
 
     public void ajouterSkieur(Skieur skieur)
     {
 
         try {
-            String requeteSQLAjouterSkieur = "INSERT  INTO skieur(nom,prenom,age,poids) VALUES('"+
-                    skieur.getNom()+"','"+
-                    skieur.getPrenom()+"','"+
-                    skieur.getAge()+"','"+
-                    skieur.getPoids()+"')";
-            Statement requeteAjouterSkieurs = connection.createStatement();
-            requeteAjouterSkieurs.execute(requeteSQLAjouterSkieur);
+
+            PreparedStatement requeteAjouterSkieur = connection.prepareStatement(SQL_AJOUTER_SKIEUR);
+            requeteAjouterSkieur.setString(1, skieur.getNom());
+            requeteAjouterSkieur.setString(2, skieur.getPrenom());
+            requeteAjouterSkieur.setString(3, skieur.getAge());
+            requeteAjouterSkieur.setString(4, skieur.getPoids());
+            requeteAjouterSkieur.execute();
 
 
         } catch (SQLException e) {
@@ -77,16 +93,13 @@ public class SkieurDAO {
 
     public void modifierSkieur(Skieur skieur) {
         try {
-            String requeteSQLAjouterSkieur = "UPDATE skieur SET nom='"+skieur.getNom()+"',prenom='"+
-                    skieur.getPrenom()+"',age='"+
-                    skieur.getAge()+"',poids='"+
-                    skieur.getPoids()+"' WHERE id = '"+skieur.getId()+"';";
-
-            System.out.println(requeteSQLAjouterSkieur);
-
-            Statement requeteAjouterSkieurs = connection.createStatement();
-            requeteAjouterSkieurs.execute(requeteSQLAjouterSkieur);
-
+            PreparedStatement requeteModifierSkieur = connection.prepareStatement(SQL_MODIFIER_SKIEUR);
+            requeteModifierSkieur.setString(1, skieur.getNom());
+            requeteModifierSkieur.setString(2, skieur.getPrenom());
+            requeteModifierSkieur.setString(3, skieur.getAge());
+            requeteModifierSkieur.setString(4, skieur.getPoids());
+            requeteModifierSkieur.setInt(5, skieur.getId());
+            requeteModifierSkieur.execute();
 
         } catch (SQLException e) {
             e.printStackTrace();
@@ -96,9 +109,9 @@ public class SkieurDAO {
     public void supprimerSkieur(Skieur skieur)
     {
         try {
-            String requeteSQLAjouterPrix = "DELETE FROM skieur WHERE id="+skieur.getId();
-            Statement requeteAjouterPrix = connection.createStatement();
-            requeteAjouterPrix.execute(requeteSQLAjouterPrix);
+            PreparedStatement supprimerSkieur = connection.prepareStatement(SQL_SUPPRIMER_SKIEUR);
+            supprimerSkieur.setInt(1,skieur.getId());
+            supprimerSkieur.execute();
         } catch (SQLException e) {
             e.printStackTrace();
         }
