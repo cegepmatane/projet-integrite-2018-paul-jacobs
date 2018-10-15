@@ -224,40 +224,38 @@ ALTER TABLE ONLY surveillance_skieur ALTER COLUMN id SET DEFAULT nextval('survei
 -- Data for Name: journal_skieur; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
-COPY journal_skieur (id, objet, avant, apres, opperation) FROM stdin;
-1	skieur	 	test,lol,,	INSERT
-2	skieur	31,test,lol,,	test,lol,,	UPDATE
-3	skieur	31,test,lol,,	test,lolq,q,q	UPDATE
-4	skieur	31,test,lolq,q,q	 	DELETE
-5	skieur	31,test,lolq,q,q	 	DELETE
-6	skieur	31,test,lolq,q,q	 	DELETE
-7	skieur	31,test,lolq,q,q	 	DELETE
-8	skieur	31,test,lolq,q,q	 	DELETE
-9	skieur	31,test,lolq,q,q	 	DELETE
-10	skieur	31,test,lolq,q,q	 	DELETE
-11	skieur	31,test,lolq,q,q	 	DELETE
-12	skieur	31,test,lolq,q,q	 	DELETE
-13	skieur	31,test,lolq,q,q	 	DELETE
-14	skieur	31,test,lolq,q,q	 	DELETE
-15	skieur	 	123,123,,	INSERT
-16	skieur	\N	123,123,,1	UPDATE
-17	skieur	32,123,123,,1	123,123,,1	UPDATE
-\.
+INSERT INTO journal_skieur VALUES (1, 'skieur', ' ', 'test,lol,,', 'INSERT');
+INSERT INTO journal_skieur VALUES (2, 'skieur', '31,test,lol,,', 'test,lol,,', 'UPDATE');
+INSERT INTO journal_skieur VALUES (3, 'skieur', '31,test,lol,,', 'test,lolq,q,q', 'UPDATE');
+INSERT INTO journal_skieur VALUES (4, 'skieur', '31,test,lolq,q,q', ' ', 'DELETE');
+INSERT INTO journal_skieur VALUES (5, 'skieur', '31,test,lolq,q,q', ' ', 'DELETE');
+INSERT INTO journal_skieur VALUES (6, 'skieur', '31,test,lolq,q,q', ' ', 'DELETE');
+INSERT INTO journal_skieur VALUES (7, 'skieur', '31,test,lolq,q,q', ' ', 'DELETE');
+INSERT INTO journal_skieur VALUES (8, 'skieur', '31,test,lolq,q,q', ' ', 'DELETE');
+INSERT INTO journal_skieur VALUES (9, 'skieur', '31,test,lolq,q,q', ' ', 'DELETE');
+INSERT INTO journal_skieur VALUES (10, 'skieur', '31,test,lolq,q,q', ' ', 'DELETE');
+INSERT INTO journal_skieur VALUES (11, 'skieur', '31,test,lolq,q,q', ' ', 'DELETE');
+INSERT INTO journal_skieur VALUES (12, 'skieur', '31,test,lolq,q,q', ' ', 'DELETE');
+INSERT INTO journal_skieur VALUES (13, 'skieur', '31,test,lolq,q,q', ' ', 'DELETE');
+INSERT INTO journal_skieur VALUES (14, 'skieur', '31,test,lolq,q,q', ' ', 'DELETE');
+INSERT INTO journal_skieur VALUES (15, 'skieur', ' ', '123,123,,', 'INSERT');
+INSERT INTO journal_skieur VALUES (16, 'skieur', NULL, '123,123,,1', 'UPDATE');
+INSERT INTO journal_skieur VALUES (17, 'skieur', '32,123,123,,1', '123,123,,1', 'UPDATE');
+INSERT INTO journal_skieur VALUES (18, 'skieur', NULL, 'test,test,test,0', 'UPDATE');
+INSERT INTO journal_skieur VALUES (19, 'skieur', '24,test,test,test,0', 'test,test,test,0', 'UPDATE');
 
 
 --
 -- Name: journal_skieur_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
 
-SELECT pg_catalog.setval('journal_skieur_id_seq', 17, true);
+SELECT pg_catalog.setval('journal_skieur_id_seq', 19, true);
 
 
 --
 -- Data for Name: prix; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
-COPY prix (id, titre, date_prix, id_skieur, temps) FROM stdin;
-\.
 
 
 --
@@ -278,10 +276,8 @@ SELECT pg_catalog.setval('prix_id_skieur_seq', 1, false);
 -- Data for Name: skieur; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
-COPY skieur (id, nom, prenom, age, poids) FROM stdin;
-24	test	test	test	\N
-32	123	123		1
-\.
+INSERT INTO skieur VALUES (32, '123', '123', '', 1);
+INSERT INTO skieur VALUES (24, 'test', 'test', 'test', 0);
 
 
 --
@@ -295,9 +291,7 @@ SELECT pg_catalog.setval('skieur_id_seq', 32, true);
 -- Data for Name: surveillance_skieur; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
-COPY surveillance_skieur (id, moment, "moyennePoidsSkieur", "totalSkieur", checksum) FROM stdin;
-1	2018-09-28	1	2	6a3eaa0a95b57a9913539ba294855fa8
-\.
+INSERT INTO surveillance_skieur VALUES (1, '2018-09-28', 1, '2', '6a3eaa0a95b57a9913539ba294855fa8');
 
 
 --
