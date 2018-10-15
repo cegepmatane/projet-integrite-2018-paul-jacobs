@@ -14,7 +14,132 @@ SET check_function_bodies = false;
 SET client_min_messages = warning;
 SET row_security = off;
 
+DROP DATABASE IF EXISTS skieur;
+--
+-- Name: skieur; Type: DATABASE; Schema: -; Owner: postgres
+--
+
+CREATE DATABASE skieur WITH TEMPLATE = template0 ENCODING = 'UTF8' LC_COLLATE = 'French_Canada.1252' LC_CTYPE = 'French_Canada.1252';
+
+
+ALTER DATABASE skieur OWNER TO postgres;
+
+\connect skieur
+
+SET statement_timeout = 0;
+SET lock_timeout = 0;
+SET idle_in_transaction_session_timeout = 0;
+SET client_encoding = 'UTF8';
+SET standard_conforming_strings = on;
+SET check_function_bodies = false;
+SET client_min_messages = warning;
+SET row_security = off;
+
+--
+-- Name: plpgsql; Type: EXTENSION; Schema: -; Owner: 
+--
+
+CREATE EXTENSION IF NOT EXISTS plpgsql WITH SCHEMA pg_catalog;
+
+
+--
+-- Name: EXTENSION plpgsql; Type: COMMENT; Schema: -; Owner: 
+--
+
+COMMENT ON EXTENSION plpgsql IS 'PL/pgSQL procedural language';
+
+
 SET search_path = public, pg_catalog;
+
+--
+-- Name: copiercamp(); Type: FUNCTION; Schema: public; Owner: postgres
+--
+
+CREATE FUNCTION copiercamp() RETURNS void
+    LANGUAGE plpgsql
+    AS $$
+DECLARE
+	moutonCourant RECORD;
+BEGIN
+	FOR moutonCourant IN
+		select *, cast(ancienpoids as double precision) as bonpoids from mouton
+    
+    LOOP
+    	UPDATE MOUTON set poids = moutonCourant.bonpoids WHERE id = moutonCourant.id;
+        
+    END LOOP;
+END
+$$;
+
+
+ALTER FUNCTION public.copiercamp() OWNER TO postgres;
+
+--
+-- Name: journaliserskieur(); Type: FUNCTION; Schema: public; Owner: postgres
+--
+
+CREATE FUNCTION journaliserskieur() RETURNS trigger
+    LANGUAGE plpgsql
+    AS $$
+
+DECLARE 
+avant TEXT;
+apres TEXT;
+BEGIN
+	avant := ' ';
+    apres := ' ';
+	IF TG_OP = 'DELETE' OR TG_OP = 'UPDATE' THEN
+		avant := OLD.id || ',' || OLD.nom || ',' || OLD.prenom || ',' || OLD.age || ',' || OLD.poids;
+    END IF;
+    IF TG_OP = 'INSERT' OR TG_OP = 'UPDATE' THEN
+		apres := NEW.nom || ',' || NEW.prenom || ',' || NEW.age || ',' || NEW.poids;
+    END IF;
+insert into journal_skieur(objet, avant, apres, opperation) values(TG_TABLE_NAME,avant,apres,TG_OP);
+	IF TG_OP = 'DELETE' THEN
+    	return OLD;
+    ELSE
+		return NEW;
+	END IF;
+END;
+$$;
+
+
+ALTER FUNCTION public.journaliserskieur() OWNER TO postgres;
+
+--
+-- Name: sauvegarderchamp(); Type: FUNCTION; Schema: public; Owner: postgres
+--
+
+CREATE FUNCTION sauvegarderchamp() RETURNS void
+    LANGUAGE plpgsql
+    AS $$
+
+DECLARE 
+
+	skieurCourant RECORD;
+	moyennePoidsSkieur integer;
+	totalSkieur integer;
+	checksum text;
+	
+BEGIN	
+
+checksum:='';
+
+	FOR skieurCourant IN 
+    SELECT * from skieur 
+    LOOP
+		checksum:= checksum || skieurCourant.prenom || ', ' ;
+	END LOOP; 
+	
+	select count(*) INTO totalSkieur from skieur ;
+	select AVG(poids) INTO moyennePoidsSkieur from skieur;
+	INSERT INTO surveillance_skieur (moment, "totalSkieur", "moyennePoidsSkieur", checksum) VALUES ( NOW(), totalSkieur, moyennePoidsSkieur, MD5(checksum));
+
+END 
+$$;
+
+
+ALTER FUNCTION public.sauvegarderchamp() OWNER TO postgres;
 
 SET default_tablespace = '';
 
@@ -353,6 +478,13 @@ CREATE TRIGGER journaliserskieur BEFORE INSERT OR DELETE OR UPDATE ON skieur FOR
 
 ALTER TABLE ONLY prix
     ADD CONSTRAINT fk_skieur FOREIGN KEY (id_skieur) REFERENCES skieur(id) ON DELETE CASCADE;
+
+
+--
+-- Name: public; Type: ACL; Schema: -; Owner: postgres
+--
+
+GRANT ALL ON SCHEMA public TO PUBLIC;
 
 
 --
